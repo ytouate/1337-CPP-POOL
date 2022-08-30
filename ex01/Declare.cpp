@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:51:09 by ytouate           #+#    #+#             */
-/*   Updated: 2022/08/30 10:29:28 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/08/30 12:54:28 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void    PhoneBook::exitPhoneBook(void) const{
 
 void    PhoneBook::searchContact(int index) const
 {
-    if (index >= MAX_CONTACTS or index <= 0)
+    if (index >= MAX_CONTACTS or index < 0)
         std::cerr << "Please Insert an index withi 0 and 8" << std::endl;
     else
         this->contacts[index].displayContact(index);

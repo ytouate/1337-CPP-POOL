@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:35:52 by ytouate           #+#    #+#             */
-/*   Updated: 2022/08/30 10:29:08 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/08/30 12:54:01 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ int main()
         }
         else if (choice == "EXIT")
             c_PhoneBook.exitPhoneBook();
+        else
+            std::cerr << "Invalid Choice" << std::endl;
     }
 }

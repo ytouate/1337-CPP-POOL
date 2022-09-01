@@ -6,11 +6,12 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 21:06:42 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/01 09:14:51 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/01 17:06:05 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
 
 std::string    Contact::getFirstName(void) const{
     return (this->firstName);
@@ -107,13 +108,23 @@ bool    Contact::setSecret(void) {
 bool    Contact::addContact(void)
 {
 
+    std::string firstNameCopy = this->firstName;
+    std::string lastNameCopy = this->lastName;
+    std::string phoneNumberCopy = this->phoneNumber;
+    std::string darkestSecretCopy = this->darkestSecret;
+    std::string nickNameCopy = this->nickName;
+
     if (   !this->setFirstName()
         or !this->setLastName()
         or !this->setNickName()
         or !this->setPhoneNumber()
         or !this->setSecret())
     {
-        this->firstName = this->lastName = this->nickName = this->phoneNumber = this->darkestSecret = "";
+        this->firstName = firstNameCopy;
+        this->lastName = lastNameCopy;
+        this->nickName = nickNameCopy;
+        this->phoneNumber = phoneNumberCopy;
+        this->darkestSecret = darkestSecretCopy;
         return (false);
     }
     return (true);
@@ -159,7 +170,7 @@ void    Contact::displayContact(int index) const{
     lastName = this->getLastName();
     nickName = this->getNickName();
 
-    std::cout << std::setfill(' ') << std::setw(10) << index << "|";
+    std::cout << std::setfill(' ') << std::setw(10) << index + 1 << "|";
     firstName.length() > 10 ? std::cout << firstName.substr(0, 9) + "." :
         std::cout << std::setfill(' ') << std::setw(10) << firstName;
     std::cout << "|";

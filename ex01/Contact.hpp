@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 09:12:36 by ytouate           #+#    #+#             */
-/*   Updated: 2022/08/30 10:26:06 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/01 12:21:30 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CONTACT_H
 
 #include <iostream>
+#include <iomanip>
 
 class Contact
 {
@@ -27,9 +28,17 @@ public:
     std::string    getFirstName(void) const;
     std::string    getLastName(void) const;
     std::string    getNickName(void) const;
-    void    addContact(void);
+    std::string    getSecret(void) const;
+    std::string    getPhoneNumber(void) const;
+    bool    setFirstName(void);
+    bool    setLastName(void);
+    bool    setPhoneNumber(void);
+    bool    setNickName(void);
+    bool    addContact(void);
+    bool    setSecret(void);
     void    displayContact(int index) const;
     void    clearContactFiled(void);
+    void    displayContactInDetails(int index) const;
 };
 
 #endif

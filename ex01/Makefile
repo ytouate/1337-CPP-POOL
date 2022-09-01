@@ -6,13 +6,14 @@
 #    By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 13:57:50 by ytouate           #+#    #+#              #
-#    Updated: 2022/08/30 09:09:02 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/01 12:17:09 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
 	./PhoneBook.cpp	\
-	./Declare.cpp	\
+	./Contact.cpp	\
+	./main.cpp		\
 
 NAME = PhoneBook
 

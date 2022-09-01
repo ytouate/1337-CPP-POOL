@@ -6,7 +6,7 @@
 #    By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 13:57:50 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/01 17:16:03 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/01 17:17:22 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FILE = \
 
 NAME = PhoneBook
 
-CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror
 
 O_FILE = $(FILE:.cpp=.o)
 

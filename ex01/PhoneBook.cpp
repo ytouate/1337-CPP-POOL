@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:35:52 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/01 17:08:01 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/01 17:17:45 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void    PhoneBook::searchContact(int index) const
         this->contacts[index].displayContactInDetails(index);
 }
 
-void    PhoneBook::displayAllContacts(int nbContact) {
+void    PhoneBook::displayAllContacts(void) {
     for (int i = 0; i < this->getContactCount(); i++)
         this->contacts[i].displayContact(i);
 }

@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:34:36 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/01 17:07:09 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/01 17:17:52 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
     int     getContactCount(void) const;
     void    setContactCount(int);
     bool    requestContact(int index);
-    void    displayAllContacts(int nbContact);
+    void    displayAllContacts(void);
     void    searchContact(int index) const;
     void    exitPhoneBook() const;
 };

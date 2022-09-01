@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 21:07:47 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/01 17:07:01 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/01 17:18:00 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int main()
         }
         else if (choice == "SEARCH")
         {
-            c_PhoneBook.displayAllContacts(contacts_num);
+            c_PhoneBook.displayAllContacts();
             std::cout << "Insert the id of the Contact (1 indexed!)" << std::endl;
             get_index(index);
             c_PhoneBook.searchContact(index - 1);

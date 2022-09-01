@@ -6,7 +6,7 @@
 #    By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/30 14:02:40 by ytouate           #+#    #+#              #
-#    Updated: 2022/08/30 14:03:24 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/01 17:16:06 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,14 @@ FILE = \
 
 NAME = account
 
+CFLAGS = -Wall -Wextra -Werror
+
 O_FILE = $(FILE:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME) : $(O_FILE)
-	g++ -Wall -Wextra -Werror -std=c++98 -pedantic $(O_FILE) -o $(NAME)
+	c++ -Wall -Wextra -Werror -std=c++98 $(O_FILE) -o $(NAME)
 	
 clean:
 	rm -rf *.o

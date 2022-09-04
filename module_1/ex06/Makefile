@@ -6,7 +6,7 @@
 #    By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 12:18:47 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/03 18:26:22 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/04 09:32:17 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ FILE = \
 	./main.cpp	\
 	./Harl.cpp
 
-NAME = harl
+NAME = harlFilter
 
 CPPFLAGS = -Wall -Wextra -Werror 
 

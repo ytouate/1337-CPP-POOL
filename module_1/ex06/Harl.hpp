@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/03 12:06:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/03 15:50:53 by ytouate          ###   ########.fr       */
+/*   Created: 2022/09/03 17:15:23 by ytouate           #+#    #+#             */
+/*   Updated: 2022/09/03 21:21:40 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sed.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-int main(int ac, char **av) {
-    if (ac != 4)
-    {
-        std::cout
-        << "Usage: [file name] [string to be replaced] [string to replace with]"
-        << std::endl;
-        return (1);
-    }
-    else {
-        Sed sed(av[1], av[2], av[3]);
-        sed.replace();
-    }
-}
+#include <iostream>
+
+
+
+class Harl {
+private:
+    void    debug(void);
+    void    info(void);
+    void    warning(void);
+    void    error(void);
+public:
+    void    complain(std::string level);
+};
+
+typedef void    (Harl::*t_actions)(void);
+
+#endif

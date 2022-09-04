@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:40:09 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/03 16:14:20 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/04 11:21:12 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ private:
     std::fstream myFile;
     std::string replacedFileName;
     int occurIndex;
+    int prev;
+    int lineCount;
 public:
-    void    (Sed::*display) (int a);
     Sed(std::string fileName, std::string s, std::string s1);
     void    replace(void);
+    void    handleErrors(void);
 };
 
 #endif

@@ -6,28 +6,28 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 17:17:58 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/03 21:29:19 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/04 11:34:51 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 void    Harl::debug() {
-    std::cout << "[ debug ]" << std::endl;
+    std::cout << "[ DEBUG ]" << std::endl;
     std::cout << "debug function called" << std::endl;
 }
 
 void    Harl::info() {
-    std::cout << "[ info ]" << std::endl;
+    std::cout << "[ INFO ]" << std::endl;
     std::cout << "info function called " << std::endl;
 }
 
 void    Harl::error() {
-    std::cout << "[ error ]" << std::endl;
+    std::cout << "[ ERROR ]" << std::endl;
     std::cout << "error function called" << std::endl;
 }
 void    Harl::warning() {
-    std::cout << "[ warning ]" << std::endl;
+    std::cout << "[ WARNING ]" << std::endl;
     std::cout << "warning function called" << std::endl;
 }
 
@@ -36,7 +36,7 @@ void    Harl::complain(std::string level) {
     
 
     t_actions actions[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-    std::string levels[4] = {"debug", "info", "warning", "error"};
+    std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
     int actionIndex = -1;
 

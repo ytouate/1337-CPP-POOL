@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:40:07 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/04 11:21:32 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/04 11:25:11 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void    Sed::replace(void) {
     this->handleErrors();
-    replacedFileName = fileName + ".replace";
     replacedFile.open(replacedFileName, std::ios::out | std::ios::trunc);
     while (std::getline(myFile, line)) {
         lineCount++;

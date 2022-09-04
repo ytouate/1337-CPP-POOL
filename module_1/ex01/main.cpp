@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:27:44 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/04 10:37:21 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/04 11:27:58 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main() {
     
     // zombieHorde() tests 
     std::cout << "\033[1;32m ____zombieHorde() tests____\033[0m" << std::endl;   
-    Zombie *Zombies = zombieHorde(5, "zombie Horde");
+    Zombie *Zombies = zombieHorde(-1, "zombie Horde");
     for (int i = 0; i < 5; i++)
         Zombies[i].announce();
     delete[] Zombies;

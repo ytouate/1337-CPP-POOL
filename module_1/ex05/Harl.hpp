@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 17:15:23 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/03 18:10:54 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/05 17:05:28 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
     void    error(void);
 public:
     void    complain(std::string level);
+    int operator+(int a);
 };
 
 #endif

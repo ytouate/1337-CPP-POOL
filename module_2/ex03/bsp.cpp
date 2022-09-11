@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 12:34:36 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/11 14:50:12 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/11 14:53:15 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ bsp(
     bArea = getArea(b.getX(), b.getY(), c.getX(), c.getY(), point.getX(), point.getY());
     cArea = getArea(c.getX(), c.getY(), a.getX(), a.getY(), point.getX(), point.getY());
     rectArea = getArea(a.getX(), a.getY(), b.getX(), b.getY(), c.getX(), c.getY());
-    std::cout << "areas: " << aArea << " " << bArea << " " << cArea << " " << rectArea << std::endl;
     return (rectArea == (aArea + bArea + cArea));
 }

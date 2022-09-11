@@ -6,17 +6,15 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 12:43:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/11 12:15:56 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/11 12:27:12 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-
 const int Fixed::nbFractions = 8;
 
 Fixed::Fixed() {
-    // std::cout << "constructor called" << std::endl;
     this->fixedPointNumberValue = 0;
 }
 
@@ -30,7 +28,6 @@ std::istream & operator >> (std::istream &is, Fixed &obj) {
 }
 
 Fixed & Fixed::operator=(Fixed const &copy) {
-    // std::cout << "Copy assignment operator called" << std::endl;
     this->fixedPointNumberValue = copy.fixedPointNumberValue;
     return (*this);
 }
@@ -81,7 +78,6 @@ bool Fixed::operator <= (Fixed const &obj) {
 
 Fixed::Fixed(Fixed const &obj) {
     this->fixedPointNumberValue = obj.fixedPointNumberValue;
-    // std::cout << "Copy constructor called" << std::endl;
 }
 
 void    Fixed::setRawBits(int const raw) {
@@ -95,7 +91,6 @@ int Fixed::getRawBits() const {
 }
 
 Fixed::~Fixed() {
-    // std::cout << "destructor called" << std::endl;
 }
 
 Fixed::Fixed(int const n) {
@@ -121,6 +116,7 @@ Fixed&  Fixed::operator-- (void) {
     --(this->fixedPointNumberValue);
     return (*this);
 }
+
 Fixed  Fixed::operator++ (int post) {
     (void)post;
 
@@ -144,7 +140,6 @@ Fixed&  Fixed::min(Fixed &ref1, Fixed &ref2) {
 const Fixed&  Fixed::min(Fixed const &ref1, Fixed const &ref2) {
     return (ref1 < ref2 ? ref1 : ref2);
 }
-
 
 Fixed&  Fixed::max(Fixed &ref1, Fixed &ref2) {
     return (ref1 > ref2 ? ref1 : ref2);

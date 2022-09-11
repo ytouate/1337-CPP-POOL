@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 12:43:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/11 12:00:08 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/11 12:26:03 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ public:
     int		toInt(void) const;
     int		getRawBits(void) const;
     float	toFloat(void) const;
-    // additional overloads
     Fixed&	operator = (Fixed const &obj);
     Fixed   operator + (Fixed const &obj);
     Fixed   operator * (Fixed const &obj);
@@ -51,8 +50,6 @@ public:
     static const Fixed&  max(Fixed const &, Fixed const &);
     ~Fixed();
 };
-    // bool    operator < (Fixed const &a, Fixed const &obj);
-    // bool    operator > (Fixed const &a, Fixed const &obj);
     std::istream & operator >> (std::istream &is, Fixed &);
     std::ostream&	operator<<(std::ostream &os, const Fixed &);
 

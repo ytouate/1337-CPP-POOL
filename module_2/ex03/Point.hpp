@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 12:30:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/11 14:36:26 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/11 15:05:45 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,15 @@ class Point
 private:
     Fixed x;
     Fixed y;
-    float area;
 public:
     Point();
     Point (float const x, float const y);
     Point(Point &);
     float getX(void) const;
     float getY(void) const;
-    Point & operator = (Point &);
+    void    setX(float x);
+    void    setY(float y);
+    Point & operator = (Point const &);
     ~Point();
 };
 bool

@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 12:30:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/11 15:05:45 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/12 11:38:25 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class Point
 {
 private:
-    Fixed x;
-    Fixed y;
+    Fixed const x;
+    Fixed const y;
 public:
     Point();
     Point (float const x, float const y);

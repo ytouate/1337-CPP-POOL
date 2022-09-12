@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 12:43:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/11 12:27:12 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/12 12:52:36 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ Fixed  Fixed::operator++ (int post) {
 Fixed  Fixed::operator-- (int post) {
     (void)post;
     Fixed temp = *this;
-    ++(this->fixedPointNumberValue);
+    --(this->fixedPointNumberValue);
     return (temp);
 }
 

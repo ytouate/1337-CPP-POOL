@@ -6,19 +6,20 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:00 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 15:10:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/17 16:50:26 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
-    ScavTrap    opponent_1("Youssef");
-    ScavTrap    opponent_2("Touate");
-    ScavTrap    opponent_3("Random");
+    FragTrap    opponent_1("Youssef");
+    ClapTrap    opponent_2("Touate");
+    ScavTrap   opponent_3("Random");
     
-    opponent_3 = opponent_1;
+    // opponent_3 = opponent_1;
     opponent_1.attack(opponent_2.getName());
     opponent_2.takeDamage(opponent_1.getAttackDamage());
     opponent_1.attack(opponent_2.getName());
@@ -28,7 +29,7 @@ int main() {
     opponent_1.attack(opponent_2.getName());
     opponent_2.takeDamage(opponent_1.getAttackDamage());
     opponent_1.attack(opponent_2.getName());
-    opponent_2.guardGate();
+    opponent_1.highFivesGuys();
     opponent_2.takeDamage(opponent_1.getAttackDamage());
     opponent_1.attack(opponent_2.getName());
     opponent_2.takeDamage(opponent_1.getAttackDamage());

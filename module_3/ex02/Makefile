@@ -6,15 +6,17 @@
 #    By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/13 18:42:16 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/17 14:23:16 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/17 16:49:35 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
 	./main.cpp	\
 	./ClapTrap.cpp	\
+	./ScavTrap.cpp	\
+	./FragTrap.cpp	\
 
-NAME = clap_trap
+NAME = frag_trap
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

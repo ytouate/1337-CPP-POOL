@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:09:45 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 14:16:54 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/17 21:14:16 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 #define FRAG_TRAP_HPP
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap{
+class FragTrap : public ClapTrap
+{
 private:
 public:
-    FragTrap(const std::string & name);
+    FragTrap(const std::string &name);
     FragTrap(FragTrap &);
     ~FragTrap();
-    FragTrap& operator = (FragTrap &);
-    
-    void    highFivesGuys(void);
+    FragTrap &operator=(FragTrap &);
+
+    void highFivesGuys(void);
 };
 
 #endif

@@ -6,18 +6,19 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:00 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 15:10:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/17 21:08:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
-int main() {
-    ScavTrap    opponent_1("Youssef");
-    ScavTrap    opponent_2("Touate");
-    ScavTrap    opponent_3("Random");
-    
+int main()
+{
+    ScavTrap opponent_1("Youssef");
+    ScavTrap opponent_2("Touate");
+    ScavTrap opponent_3("Random");
+
     opponent_3 = opponent_1;
     opponent_1.attack(opponent_2.getName());
     opponent_2.takeDamage(opponent_1.getAttackDamage());

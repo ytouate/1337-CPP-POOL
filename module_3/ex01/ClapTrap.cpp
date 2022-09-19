@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:04 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 21:28:10 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/19 10:06:19 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     else
     {
+        std::cout << this->name << ": Repaired itself" << std::endl;
         this->hitPoints += amount;
         this->energyPoints -= 1;
     }

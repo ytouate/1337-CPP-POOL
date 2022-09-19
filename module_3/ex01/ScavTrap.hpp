@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:11:04 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 21:08:35 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/19 09:44:56 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ public:
     ScavTrap(std::string name);
     void guardGate();
     void attack(const std::string &target);
+    void showInfo();
     ScavTrap(ScavTrap &);
     ScavTrap &operator=(ScavTrap &);
     ~ScavTrap();

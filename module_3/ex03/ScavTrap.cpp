@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:11:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 09:54:15 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/19 09:35:15 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     std::cout << "ScavTrap constructor called" << std::endl;
-    this->hitPoints = 100;
     this->energyPoints = 50;
-    this->attackDamage = 20;
 }
 
 void ScavTrap::guardGate()
@@ -25,13 +23,6 @@ void ScavTrap::guardGate()
     std::cout
         << "ScavTrap is now in Gate keeper mode"
         << std::endl;
-}
-
-void    ScavTrap::showInfo()
-{
-    std::cout << "hitPoints: " << this->hitPoints << '\n';
-    std::cout << "energyPoints: " << this->energyPoints << '\n';
-    std::cout << "attackDamge: " << this->attackDamage << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
@@ -47,13 +38,14 @@ void ScavTrap::attack(const std::string &target)
         std::cout << "ScavTrap " << this->name << " attacks "
                   << target << " causing " << this->attackDamage
                   << " Points of damage!" << std::endl;
+        this->hitPoints -= 1;
         this->energyPoints -= 1;
     }
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap Destructor called" << std::endl;
+    std::cout << "ScavTrap constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap &obj) : ClapTrap(obj.name)

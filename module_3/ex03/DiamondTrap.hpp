@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 12:04:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 09:39:50 by ytouate          ###   ########.fr       */
+/*   Created: 2022/09/18 16:36:13 by ytouate           #+#    #+#             */
+/*   Updated: 2022/09/18 18:40:39 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAP_TRAP_HPP
-#define CLAP_TRAP_HPP
+#ifndef DIAMOND_TRAP_HPP
+#define DIAMOND_TRAP_HPP
 
-#include <iostream>
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-class ClapTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
 private:
     std::string name;
-    int hitPoints;
-    int energyPoints;
-    int attackDamage;
+    std::string _clap_name;
 
 public:
-    ClapTrap(const std::string &name);
-    void attack(const std::string &target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
-    ClapTrap &operator=(ClapTrap &);
-    std::string &getName(void);
+    DiamondTrap(std::string name);
+    DiamondTrap(DiamondTrap &obj);
+    DiamondTrap &operator=(DiamondTrap &rhs);
+    std::string getName(void);
     unsigned int getAttackDamage(void);
     unsigned int getHitPoints(void);
-    void showInfo();
-    ClapTrap(ClapTrap &);
-    ~ClapTrap();
+    void    showInfo(void);
+    void attack(const std::string &target);
+    ~DiamondTrap();
+    void whoAmI();
 };
-
 #endif

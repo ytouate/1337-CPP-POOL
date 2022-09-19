@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:09:45 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 21:14:16 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/19 09:55:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ public:
     FragTrap(const std::string &name);
     FragTrap(FragTrap &);
     ~FragTrap();
+    void attack(const std::string &target);
     FragTrap &operator=(FragTrap &);
-
+    void    showInfo(void);
     void highFivesGuys(void);
 };
 

@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 09:39:50 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/17 21:14:05 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
     std::string name;
     int hitPoints;
     int energyPoints;
@@ -32,7 +32,6 @@ public:
     std::string &getName(void);
     unsigned int getAttackDamage(void);
     unsigned int getHitPoints(void);
-    void showInfo();
     ClapTrap(ClapTrap &);
     ~ClapTrap();
 };

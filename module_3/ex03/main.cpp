@@ -6,18 +6,23 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:00 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 09:43:05 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/19 09:57:38 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
+
 int main()
 {
-    ClapTrap opponent_1("Youssef");
-    ClapTrap opponent_2("Touate");
-    
-    opponent_1.showInfo();
-    opponent_1.attack(opponent_2.getName());
-    opponent_2.takeDamage(opponent_1.getAttackDamage());
-    opponent_2.beRepaired(10);
+    DiamondTrap opp_1("Youssef");
+    DiamondTrap opp_2("Touate");
+    opp_1.showInfo();
+    opp_1.attack(opp_2.getName());
+    opp_2.takeDamage(opp_1.getAttackDamage());
+    opp_1.guardGate();
+    opp_1.highFivesGuys();
+    opp_1.whoAmI();
 }

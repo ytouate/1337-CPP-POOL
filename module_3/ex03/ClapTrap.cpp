@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:04 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 09:44:01 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/18 17:07:53 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
+
     if (hitPoints - amount <= 0 or hitPoints <= 0)
         std::cout << this->name << " is Dead " << std::endl;
     else
@@ -61,13 +62,6 @@ void ClapTrap::takeDamage(unsigned int amount)
         std::cout << this->name << " took " << amount << " damage" << std::endl;
         this->hitPoints -= amount;
     }
-}
-
-void ClapTrap::showInfo()
-{
-    std::cout << "hitPoints: " << this->hitPoints << '\n';
-    std::cout << "energyPoints: " << this->energyPoints << '\n';
-    std::cout << "attackDamge: " << this->attackDamage << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)

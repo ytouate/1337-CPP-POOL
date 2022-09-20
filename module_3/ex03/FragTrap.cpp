@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:08:24 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 09:35:53 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/20 14:44:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 
 FragTrap::~FragTrap()
 {
-    std::cout << "FragTrap constructor called" << std::endl;
+    std::cout << "FragTrap Destructor called" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(FragTrap &rhs)

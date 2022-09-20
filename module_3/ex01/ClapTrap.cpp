@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:04 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 10:06:19 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/20 14:43:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap(const std::string &name)
 {
-    std::cout << "Constructor called" << std::endl;
+    std::cout << "ClapTrap Constructor called" << std::endl;
     this->name = name;
     this->hitPoints = 10;
     this->energyPoints = 10;
@@ -49,7 +49,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap &rhs)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)

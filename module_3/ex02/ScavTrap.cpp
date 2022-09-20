@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:11:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 21:29:52 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/20 14:44:24 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void ScavTrap::attack(const std::string &target)
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap constructor called" << std::endl;
+    std::cout << "ScavTrap Destructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap &obj) : ClapTrap(obj.name)

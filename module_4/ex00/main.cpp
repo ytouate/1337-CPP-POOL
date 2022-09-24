@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/24 17:35:24 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/24 20:34:10 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 int main()
 {
     const Animal *meta = new Animal();
-    const Dog d;
     const Animal *j = new Dog();
     const Animal *i = new Cat();
     std::cout << j->getType() << " " << std::endl;
@@ -25,5 +24,9 @@ int main()
     i->makeSound(); // will output the cat sound!
     j->makeSound();
     meta->makeSound();
+
+    delete i;
+    delete j;
+    delete meta;
     return 0;
 }

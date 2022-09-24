@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/21 20:11:58 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/23 17:01:06 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ Dog &Dog::operator=(Dog &rhs)
 {
     this->type = rhs.type;
     return (*this);
+}
+
+void Dog::makeSound() const
+{
+    std::cout << "woof woof !" << std::endl;
 }
 
 Dog::Dog(Dog &obj)

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/21 19:07:30 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/23 17:00:51 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ public:
     Cat(std::string type);
     Cat(Cat &);
     Cat &operator=(Cat &);
+    void makeSound() const;
     ~Cat();
 };
 #endif

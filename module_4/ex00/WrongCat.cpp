@@ -18,7 +18,7 @@ WrongCat::WrongCat(std::string type)
     this->type = type;
 }
 
-WrongCat::WrongCat() : Animal()
+WrongCat::WrongCat() : WrongAnimal()
 {
     this->type = "WrongCat";
     std::cout << "WrongCat Default Constructor Called" << std::endl;

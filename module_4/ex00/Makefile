@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 18:47:30 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/24 18:38:53 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/24 20:42:34 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ FILE = \
 	./Cat.cpp	\
 	./Dog.cpp	\
 	./Animal.cpp	\
+	./WrongAnimal.cpp\
+	./WrongCat.cpp	\
 
 NAME = Animal
 

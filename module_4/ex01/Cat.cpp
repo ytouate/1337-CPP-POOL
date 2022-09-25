@@ -6,20 +6,20 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 14:13:17 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 16:02:02 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(std::string type): Animal(), brain (new Brain())
+Cat::Cat(std::string type) : Animal(), brain(new Brain())
 {
     std::cout << "Cat Parametrize Constructor Called" << std::endl;
     // this->brain = new Brain();
     this->type = type;
 }
 
-Cat::Cat() : Animal(), brain (new Brain())
+Cat::Cat() : Animal(), brain(new Brain())
 {
     this->type = "Cat";
     std::cout << "Cat Default Constructor Called" << std::endl;
@@ -45,4 +45,12 @@ Cat::~Cat()
 {
     delete brain;
     std::cout << "Cat Destructor Called" << std::endl;
+}
+
+void Cat::fillIdeas()
+{
+    for (int i = 0; i < ANIMALS_COUNT; i++)
+    {
+        this->brain->setIdea("Cat Idea", i);
+    }
 }

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:53:07 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:00:48 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 18:29:40 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
     void fillIdeas();
     Dog(Dog &);
     Dog &operator=(Dog &);
+    const Brain * getBrain(void) const;
     void makeSound() const;
     ~Dog();
 };

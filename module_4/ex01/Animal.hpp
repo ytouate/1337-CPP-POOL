@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:36 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:00:31 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 19:05:29 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ public:
     Animal(Animal &);
     Animal &operator=(Animal &);
     std::string getType(void) const;
-    const Brain & getBrain(void) const;
     virtual void makeSound() const;
     virtual ~Animal();
 };

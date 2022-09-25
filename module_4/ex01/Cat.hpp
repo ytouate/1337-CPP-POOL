@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:00:42 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 19:11:24 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ class Cat : public Animal
 {
 private:
     Brain *brain;
+
 public:
     Cat();
     Cat(std::string type);
-    void fillIdeas();
     Cat(Cat &);
     Cat &operator=(Cat &);
+    void fillIdeas();
     void makeSound() const;
     ~Cat();
 };

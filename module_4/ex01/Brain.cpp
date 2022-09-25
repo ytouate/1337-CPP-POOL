@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:25:21 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 19:12:52 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 Brain::Brain()
 {
+    this->ideas = new std::string[100];
     std::cout << "Brain Default constructor Called" << std::endl;
 }
 
@@ -26,22 +27,29 @@ Brain::~Brain()
 void Brain::setIdea(std::string idea, int index)
 {
     if (index < 100 and index >= 0)
+    {
         this->ideas[index] = idea;
+    }
 }
 
-std::string Brain::getIdea(int index) const
+
+void Brain::setIdeas(std::string *_ideas)
 {
-    if (index < 100 and index >= 0)
-        return (this->ideas[index]);
-    std::cout << "Index out of Range" << std::endl;
-    std::exit(1);
+    this->ideas = _ideas;
+}
+std::string *Brain::getIdeas(void) const
+{
+    return (this->ideas);
 }
 
 std::ostream &operator<<(std::ostream &os, const Brain &obj)
 {
+    std::string *_ideas;
+
+    _ideas = obj.getIdeas();
     for (int i = 0; i < ANIMALS_COUNT; i++)
     {
-        os << obj.getIdea(i) << "\n";
+        os << _ideas[i] << "\n";
     }
     return (os);
 }

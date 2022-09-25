@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:02:02 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 19:11:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Cat::Cat() : Animal(), brain(new Brain())
 
 Cat &Cat::operator=(Cat &rhs)
 {
+
     this->type = rhs.type;
     return (*this);
 }
@@ -49,7 +50,7 @@ Cat::~Cat()
 
 void Cat::fillIdeas()
 {
-    for (int i = 0; i < ANIMALS_COUNT; i++)
+    for (int i = 0; i < 100; i++)
     {
         this->brain->setIdea("Cat Idea", i);
     }

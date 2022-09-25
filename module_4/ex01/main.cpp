@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:23:54 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 19:13:02 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 int main()
 {
     Animal *animalsArray = new Animal[ANIMALS_COUNT];
-    Cat animalCat;
-    Dog animalDog;
-    
-    animalCat.fillIdeas();
-    animalCat.fillIdeas();
-    
-    delete [] animalsArray;
-    for (int x = 0; x < ANIMALS_COUNT; x++) {
+    Cat *animalCat = new Cat;
+    Dog *animalDog = new Dog;
+
+    std::cout << animalCat->getType() << std::endl;
+    animalCat->fillIdeas();
+    animalDog->fillIdeas();
+    for (int x = 0; x < ANIMALS_COUNT; x++)
+    {
         if (x < NUM_CATS)
-            animalsArray[x].operator=(animalCat);
+            animalsArray[x] = *animalCat;
         else
-            animalsArray[x] = animalDog;
+            animalsArray[x] = *animalDog;
     }
-    std::cout << animalsArray[0].getBrain() << std::endl;
+    delete[] animalsArray;
     return 0;
 }

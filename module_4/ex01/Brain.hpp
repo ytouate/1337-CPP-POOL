@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:57 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:25:15 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 19:11:35 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@
 class Brain
 {
 private:
-    std::string ideas[100];
+    std::string *ideas;
 
 public:
     Brain();
     Brain(Brain &);
     void    setIdea(std::string idea, int index);
-    std::string getIdea(int index) const;
+    void    setIdeas(std::string *ideas);
+    std::string* getIdeas(void) const;
     Brain &operator=(Brain &rhs);
     ~Brain();
 };

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 15:59:57 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 19:11:53 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ Animal &Animal::operator=(Animal &rhs)
             delete brain;
         }
         this->brain = new Brain;
-        for (int i = 0; i < 100; i++)
-        {
-            this->brain->setIdea(rhs.brain->getIdea(i), i);
-        }
+        this->brain->setIdeas(rhs.brain->getIdeas());
         this->type = rhs.type;
     }
     return (*this);
@@ -66,8 +63,4 @@ Animal::Animal(Animal &obj)
 Animal::~Animal()
 {
     std::cout << "Animal Destructor Called" << std::endl;
-}
-
-const Brain & Animal::getBrain(void) const {
-    return (*this->brain);
 }

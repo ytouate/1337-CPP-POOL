@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 16:02:54 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 16:23:54 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int main()
         else
             animalsArray[x] = animalDog;
     }
-    // std::cout << animalsArray[0].getBrain() << std::endl;
+    std::cout << animalsArray[0].getBrain() << std::endl;
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:57 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 15:55:14 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 16:25:15 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ public:
     ~Brain();
 };
 
-std::ostream & operator << (std::ostream &os, Brain &obj);
+std::ostream & operator << (std::ostream &os, const Brain &obj);
 
 #endif

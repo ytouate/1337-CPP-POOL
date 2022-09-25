@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 15:59:11 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/25 16:25:21 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ std::string Brain::getIdea(int index) const
     std::exit(1);
 }
 
-std::ostream &operator<<(std::ostream &os, Brain &obj)
+std::ostream &operator<<(std::ostream &os, const Brain &obj)
 {
     for (int i = 0; i < ANIMALS_COUNT; i++)
     {

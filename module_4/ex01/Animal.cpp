@@ -6,44 +6,45 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 14:10:17 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 15:38:23 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "cstring"
 
-Animal::Animal(std::string type) : brain(new Brain)
+Animal::Animal(std::string type) : brain (nullptr)
 {
     std::cout << "Animal Parametrize Constructor Called" << std::endl;
     this->type = type;
 }
 
-Animal::Animal() : brain(new Brain)
+Animal::Animal() : brain (nullptr)
 {
     this->type = "Animal";
     std::cout << "Animal Default Constructor Called" << std::endl;
 }
 
-Animal &Animal::operator=(Animal *rhs)
+Animal &Animal::operator=(Animal &rhs)
 {
-    if (this != rhs)
+    if (this != &rhs)
     {
         if (!this->brain)
             this->brain = new Brain;
-        std::string *_ideas = rhs->brain->getIdeas();
+        if (!rhs.brain)
+        {
+            // std::cout << 
+            this->brain = nullptr;
+            return (*this);
+        }
+        std::string *_ideas = rhs.brain->getIdeas();
         this->brain->setIdeas(_ideas);
-        this->type = rhs->type;
+        this->type = rhs.type;
         delete _ideas;
     }
     return (*this);
 }
 
-// void Animal::fillIdeas()
-// {
-//     for (int i = 0; i < ANIMALS_COUNT; i++)
-//         this->brain->setIdea("idea", i);
-// }
 void Animal::makeSound() const
 {
     std::cout << "Animal sound" << std::endl;
@@ -61,6 +62,9 @@ Animal::Animal(Animal &obj)
 
 Animal::~Animal()
 {
-    delete this->brain;
+    if (this->brain != nullptr)
+    {
+        delete this->brain;
+    }
     std::cout << "Animal Destructor Called" << std::endl;
 }

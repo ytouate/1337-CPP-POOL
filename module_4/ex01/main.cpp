@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 12:33:37 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 16:47:37 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,11 @@
 
 int main()
 {
+    Cat *someCopy = new Cat("Youssef");
     Animal **animalsArray = new Animal *[ANIMALS_COUNT];
-    Animal *cat;
+    Cat *cat = new Cat(*someCopy);
     Animal *dog;
 
-    // TODO
-    // - FILL THE IDEAS STRING
-    // - IMPLEMENT GETTERS FOR IT FOR TESTING
-    // - DO MORE TESTS
     for (int x = 0; x < ANIMALS_COUNT; x++)
     {
         if (x < NUM_CATS)
@@ -41,6 +38,7 @@ int main()
     }
     for (int x = 0; x < ANIMALS_COUNT; x++)
     {
+        std::cout << "the type is " << animalsArray[x]->getType() << std::endl;
         delete animalsArray[x];
     }
     delete [] animalsArray;

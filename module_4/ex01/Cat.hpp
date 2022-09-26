@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 19:11:24 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 15:27:31 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
     Cat(Cat &);
     Cat &operator=(Cat &);
     void fillIdeas();
+    Brain *getBrain(void) const;
     void makeSound() const;
     ~Cat();
 };

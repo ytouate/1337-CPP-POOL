@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 14:06:58 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 15:28:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ Cat::~Cat()
     std::cout << "Cat Destructor Called" << std::endl;
 }
 
+Brain *Cat::getBrain() const
+{
+    return (this->brain);
+}
 // void Cat::fillIdeas()
 // {
 //     for (int i = 0; i < 100; i++)

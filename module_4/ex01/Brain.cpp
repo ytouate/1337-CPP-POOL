@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 19:12:52 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 12:14:08 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 Brain::Brain()
 {
-    this->ideas = new std::string[100];
     std::cout << "Brain Default constructor Called" << std::endl;
 }
 
@@ -32,14 +31,21 @@ void Brain::setIdea(std::string idea, int index)
     }
 }
 
-
 void Brain::setIdeas(std::string *_ideas)
 {
-    this->ideas = _ideas;
+    for (int i = 0; i < 100; i++)
+    {
+        this->ideas[i] = _ideas[i];
+    }
 }
 std::string *Brain::getIdeas(void) const
 {
-    return (this->ideas);
+    std::string *temp = new std::string[100];
+    for (int i = 0; i < 100; i++)
+    {
+        temp[i] = this->ideas[i];
+    }
+    return (temp);
 }
 
 std::ostream &operator<<(std::ostream &os, const Brain &obj)

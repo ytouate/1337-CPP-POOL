@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:57 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 19:11:35 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 12:10:27 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Brain
 {
 private:
-    std::string *ideas;
+    std::string ideas[100];
 
 public:
     Brain();

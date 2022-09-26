@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 19:11:53 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 12:28:43 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,20 @@ Animal::Animal() : brain(new Brain)
     std::cout << "Animal Default Constructor Called" << std::endl;
 }
 
-Animal &Animal::operator=(Animal &rhs)
+Animal &Animal::operator=(Animal *rhs)
 {
-    if (this != &rhs)
+    if (this != rhs)
     {
-        if (this->brain)
-        {
-            delete brain;
-        }
-        this->brain = new Brain;
-        this->brain->setIdeas(rhs.brain->getIdeas());
-        this->type = rhs.type;
+        std::cout << "DEBUG MESSAGE" << std::endl;
+        // if (this->brain)
+        // {
+        //     delete brain;
+        // }
+        // std::string *_ideas = rhs->brain->getIdeas();
+        // this->brain = new Brain;
+        // this->brain->setIdeas(_ideas);
+        this->type = rhs->type;
+        // delete _ideas;
     }
     return (*this);
 }
@@ -62,5 +65,6 @@ Animal::Animal(Animal &obj)
 
 Animal::~Animal()
 {
+    delete this->brain;
     std::cout << "Animal Destructor Called" << std::endl;
 }

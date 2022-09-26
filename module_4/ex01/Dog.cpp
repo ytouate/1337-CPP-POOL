@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 15:30:38 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:51:16 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,11 @@ Brain *Dog::getBrain() const
     return (this->brain);
 }
 
-// void Dog::fillIdeas()
-// {
-//     for (int i = 0; i < ANIMALS_COUNT; i++)
-//     {
-//         this->brain->setIdea("Dog Idea", i);
-//     }
-// }
+void Dog::fillIdeas()
+{
+    std::cout << "Dog fillIdeas member function called" << std::endl;
+    for (int i = 0; i < ANIMALS_COUNT; i++)
+    {
+        this->brain->setIdea("Dog Idea", i);
+    }
+}

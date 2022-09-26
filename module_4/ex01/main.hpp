@@ -1,42 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 18:47:36 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 17:50:10 by ytouate          ###   ########.fr       */
+/*   Created: 2022/09/26 17:37:21 by ytouate           #+#    #+#             */
+/*   Updated: 2022/09/26 17:41:12 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-#define ANIMAL_H
+#ifndef MAIN_HPP
+#define MAIN_HPP
 
-
-#include "Brain.hpp"
 #include <iostream>
-
-#define ANIMALS_COUNT 4
-#define NUM_CATS (ANIMALS_COUNT / 2)
-
-class Animal
-{
-private:
-    Brain *brain;
-protected:
-    std::string type;
-
-public:
-    Animal();
-    Animal(std::string type);
-    Animal(Animal &);
-    virtual void fillIdeas();
-    Animal &operator=(Animal &);
-    std::string getType(void) const;
-    virtual void makeSound() const;
-    virtual ~Animal();
-};
-
+#include <fstream>
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
 #endif

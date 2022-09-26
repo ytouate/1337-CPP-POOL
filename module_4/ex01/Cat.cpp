@@ -6,11 +6,11 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 15:28:59 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:54:49 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "main.hpp"
 
 Cat::Cat(std::string type) : Animal(), brain(new Brain())
 {
@@ -52,10 +52,12 @@ Brain *Cat::getBrain() const
 {
     return (this->brain);
 }
-// void Cat::fillIdeas()
-// {
-//     for (int i = 0; i < 100; i++)
-//     {
-//         this->brain->setIdea("Cat Idea", i);
-//     }
-// }
+
+void Cat::fillIdeas()
+{
+    std::cout << "Cat fillIdeas member function called" << std::endl;
+    for (int i = 0; i < 100; i++)
+    {
+        this->brain->setIdea("Cat Idea", i);
+    }
+}

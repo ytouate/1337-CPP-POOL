@@ -6,12 +6,12 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 12:48:15 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:46:26 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
-#include "Animal.hpp"
+#include "main.hpp"
 
 Brain::Brain()
 {

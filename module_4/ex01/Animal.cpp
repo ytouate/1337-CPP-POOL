@@ -6,12 +6,11 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 15:38:23 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:52:40 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "cstring"
+#include "main.hpp"
 
 Animal::Animal(std::string type) : brain (nullptr)
 {
@@ -67,4 +66,12 @@ Animal::~Animal()
         delete this->brain;
     }
     std::cout << "Animal Destructor Called" << std::endl;
+}
+
+void Animal::fillIdeas()
+{
+    for (int i = 0; i < 100; i++)
+    {
+        this->brain->setIdea("Animal Idea", i);
+    }
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "main.hpp"
 
 WrongAnimal::WrongAnimal(std::string type)
 {

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 17:54:03 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 20:16:01 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main()
     }
     for (int x = 0; x < ANIMALS_COUNT; x++)
     {
-        std::cout << "the type is " << animalsArray[x]->getType() << std::endl;
+        std::cout << "\n" << animalsArray[x]->getBrain()->getIdea(0) << "\n" << std::endl;
         delete animalsArray[x];
     }
     delete [] animalsArray;

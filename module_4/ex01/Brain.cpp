@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 17:46:26 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 20:19:05 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void Brain::setIdeas(std::string *_ideas)
 
 std::string *Brain::getIdeas(void) const
 {
+    if (this == nullptr)
+        return nullptr;
     std::string *temp = new std::string[100];
     for (int i = 0; i < 100; i++)
     {
@@ -59,4 +61,11 @@ std::ostream &operator<<(std::ostream &os, const Brain &obj)
         os << _ideas[i] << "\n";
     }
     return (os);
+}
+
+std::string Brain::getIdea(int index) const
+{
+    if (this != nullptr)
+        return (this->ideas[index]);
+    return "";
 }

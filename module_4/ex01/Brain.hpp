@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:57 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 17:50:27 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 20:15:36 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
     void setIdea(std::string idea, int index);
     void setIdeas(std::string *_ideas);
     std::string *getIdeas(void) const;
+    std::string getIdea(int index) const;
     Brain &operator=(Brain &rhs);
     ~Brain();
 };

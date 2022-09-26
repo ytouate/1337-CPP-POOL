@@ -6,19 +6,19 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 17:52:40 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 20:14:10 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Animal::Animal(std::string type) : brain (nullptr)
+Animal::Animal(std::string type) : brain(nullptr)
 {
     std::cout << "Animal Parametrize Constructor Called" << std::endl;
     this->type = type;
 }
 
-Animal::Animal() : brain (nullptr)
+Animal::Animal() : brain(nullptr)
 {
     this->type = "Animal";
     std::cout << "Animal Default Constructor Called" << std::endl;
@@ -32,7 +32,6 @@ Animal &Animal::operator=(Animal &rhs)
             this->brain = new Brain;
         if (!rhs.brain)
         {
-            // std::cout << 
             this->brain = nullptr;
             return (*this);
         }
@@ -56,6 +55,17 @@ std::string Animal::getType() const
 
 Animal::Animal(Animal &obj)
 {
+    if (obj.brain == nullptr)
+    {
+        if (this->brain != nullptr)
+            delete this->brain;
+    }
+    else
+    {
+        delete this->brain;
+        this->brain = new Brain;
+        this->brain->setIdeas(obj.brain->getIdeas());
+    }
     this->type = obj.type;
 }
 
@@ -74,4 +84,9 @@ void Animal::fillIdeas()
     {
         this->brain->setIdea("Animal Idea", i);
     }
+}
+
+Brain *Animal::getBrain() const
+{
+    return (this->brain);
 }

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 12:14:08 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 12:48:15 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void Brain::setIdeas(std::string *_ideas)
         this->ideas[i] = _ideas[i];
     }
 }
+
 std::string *Brain::getIdeas(void) const
 {
     std::string *temp = new std::string[100];

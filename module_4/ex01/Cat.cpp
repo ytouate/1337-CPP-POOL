@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 19:11:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 14:06:58 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ Cat::~Cat()
     std::cout << "Cat Destructor Called" << std::endl;
 }
 
-void Cat::fillIdeas()
-{
-    for (int i = 0; i < 100; i++)
-    {
-        this->brain->setIdea("Cat Idea", i);
-    }
-}
+// void Cat::fillIdeas()
+// {
+//     for (int i = 0; i < 100; i++)
+//     {
+//         this->brain->setIdea("Cat Idea", i);
+//     }
+// }

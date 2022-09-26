@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 12:28:43 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 14:10:17 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,21 @@ Animal &Animal::operator=(Animal *rhs)
 {
     if (this != rhs)
     {
-        std::cout << "DEBUG MESSAGE" << std::endl;
-        // if (this->brain)
-        // {
-        //     delete brain;
-        // }
-        // std::string *_ideas = rhs->brain->getIdeas();
-        // this->brain = new Brain;
-        // this->brain->setIdeas(_ideas);
+        if (!this->brain)
+            this->brain = new Brain;
+        std::string *_ideas = rhs->brain->getIdeas();
+        this->brain->setIdeas(_ideas);
         this->type = rhs->type;
-        // delete _ideas;
+        delete _ideas;
     }
     return (*this);
 }
 
-void Animal::fillIdeas()
-{
-    for (int i = 0; i < ANIMALS_COUNT; i++)
-        this->brain->setIdea("idea", i);
-}
+// void Animal::fillIdeas()
+// {
+//     for (int i = 0; i < ANIMALS_COUNT; i++)
+//         this->brain->setIdea("idea", i);
+// }
 void Animal::makeSound() const
 {
     std::cout << "Animal sound" << std::endl;

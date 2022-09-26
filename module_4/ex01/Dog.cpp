@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/25 18:30:19 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 14:07:04 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ Dog::~Dog()
     std::cout << "Dog Destructor Called" << std::endl;
 }
 
-void Dog::fillIdeas()
-{
-    for (int i = 0; i < ANIMALS_COUNT; i++)
-    {
-        this->brain->setIdea("Dog Idea", i);
-    }
-}
+// void Dog::fillIdeas()
+// {
+//     for (int i = 0; i < ANIMALS_COUNT; i++)
+//     {
+//         this->brain->setIdea("Dog Idea", i);
+//     }
+// }

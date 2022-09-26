@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 12:29:03 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/26 12:33:37 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 int main()
 {
     Animal **animalsArray = new Animal *[ANIMALS_COUNT];
+    Animal *cat;
+    Animal *dog;
 
     // TODO
     // - FILL THE IDEAS STRING
@@ -28,11 +30,13 @@ int main()
     {
         if (x < NUM_CATS)
         {
-            animalsArray[x] = new Cat;
+            cat = new Cat;
+            animalsArray[x] = cat;
         }
         else
         {
-            animalsArray[x] = new Dog;
+            dog = new Dog;
+            animalsArray[x] = dog;
         }
     }
     for (int x = 0; x < ANIMALS_COUNT; x++)

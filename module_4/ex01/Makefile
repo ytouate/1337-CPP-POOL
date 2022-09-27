@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 18:47:30 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/26 17:35:51 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/27 12:19:21 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,14 +21,14 @@ FILE = \
 
 NAME = Animal
 
-CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98 
 
 O_FILE = $(FILE:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME) : $(O_FILE)
-	@c++ -Wall -Wextra -Werror -std=c++98 $(O_FILE) -o $(NAME)
+	@c++ -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g $(O_FILE) -o $(NAME)
 
 clean:
 	@rm -rf *.o

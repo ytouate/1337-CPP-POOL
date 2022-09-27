@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 20:14:10 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 12:33:46 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,14 @@ Animal::Animal() : brain(nullptr)
 
 Animal &Animal::operator=(Animal &rhs)
 {
+    std::cout << "copy assignment operator of Animal\n" << std::endl;
     if (this != &rhs)
     {
-        if (!this->brain)
-            this->brain = new Brain;
-        if (!rhs.brain)
-        {
-            this->brain = nullptr;
-            return (*this);
-        }
-        std::string *_ideas = rhs.brain->getIdeas();
-        this->brain->setIdeas(_ideas);
-        this->type = rhs.type;
-        delete _ideas;
+        this->type.assign(rhs.type);
+        if (this->brain)
+            delete this->brain;
+        this->brain = new Brain;
+        this->brain->setIdeas(rhs.brain->getIdeas());
     }
     return (*this);
 }
@@ -55,18 +50,10 @@ std::string Animal::getType() const
 
 Animal::Animal(Animal &obj)
 {
-    if (obj.brain == nullptr)
-    {
-        if (this->brain != nullptr)
-            delete this->brain;
-    }
-    else
-    {
-        delete this->brain;
-        this->brain = new Brain;
-        this->brain->setIdeas(obj.brain->getIdeas());
-    }
-    this->type = obj.type;
+    // this->brain = new Brain;
+    // this->brain->setIdeas(obj.getBrain()->getIdeas());
+    std::cout << "Type \n" <<  obj.getType() << std::endl;
+    this->type.assign(obj.getType());
 }
 
 Animal::~Animal()

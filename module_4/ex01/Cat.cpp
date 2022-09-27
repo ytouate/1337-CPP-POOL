@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 20:08:40 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 12:03:34 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Cat::Cat() : Animal(), brain(new Brain())
 
 Cat &Cat::operator=(Cat &rhs)
 {
-
+    std::cout << "copy assignment operator of cat\n" << std::endl;
     this->type = rhs.type;
     return (*this);
 }

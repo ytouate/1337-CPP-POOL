@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 20:17:20 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 12:04:03 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Dog::Dog() : Animal(), brain(new Brain())
 
 Dog &Dog::operator=(Dog &rhs)
 {
+    std::cout << "copy assignment operator of Dog\n" << std::endl;
     this->type = rhs.type;
     return (*this);
 }

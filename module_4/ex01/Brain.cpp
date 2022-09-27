@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 20:19:05 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 17:41:05 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,14 @@ std::string *Brain::getIdeas(void) const
     return (temp);
 }
 
+Brain &Brain::operator=(Brain &rhs)
+{
+    for (int i = 0; i < 100; i++)
+    {
+        this->ideas[i] = rhs.ideas[i];
+    }
+    return (*this);
+}
 std::ostream &operator<<(std::ostream &os, const Brain &obj)
 {
     std::string *_ideas;

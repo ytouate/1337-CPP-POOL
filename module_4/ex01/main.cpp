@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 13:12:21 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 17:45:53 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,51 @@
 
 int main()
 {
-    Animal *animalsArray = new Animal[ANIMALS_COUNT];
-    Cat *cat;
-    Dog *dog;
+    Animal *animalsArray[ANIMALS_COUNT];
 
+    std::cout << "\n====Array of Animals====" << std::endl;
+    // creating the array of Animal Objects which half of it will
+    // contain cats and the other half will contain dogs
     for (int x = 0; x < ANIMALS_COUNT; x++)
     {
-        std::cout << "\n"
-                  << std::endl;
+        std::cout << "\n";
         if (x < NUM_CATS)
         {
-            cat = new Cat;
+            animalsArray[x] = new Cat;
+            Cat *cat = new Cat;
             cat->fillIdeas();
-            animalsArray[x].operator=(*cat);
+            animalsArray[x]->operator=(*cat);
+            delete cat;
         }
         else
         {
-            dog = new Dog;
+            animalsArray[x] = new Dog;
+            Dog *dog = new Dog;
             dog->fillIdeas();
-            animalsArray[x].operator=(*dog);
+            animalsArray[x]->operator=(*dog);
+            delete dog;
         }
     }
+    std::cout << "\n====== IDEAS ======"
+              << std::endl;
+    std::cout << "\n====Copy Constructors====" << std::endl;
+    Animal *random = new Animal(*animalsArray[0]);
     for (int x = 0; x < ANIMALS_COUNT; x++)
     {
-        std::cout << "\n"
-                  << animalsArray[x].getBrain()->getIdea(0) << "\n"
+        std::cout << animalsArray[x]->getBrain()->getIdea(0)
                   << std::endl;
+        delete animalsArray[x];
     }
-    Animal *random = new Animal(animalsArray[0]);
-    (void)random;
-    delete[] animalsArray;
-    std::cout << random->getType() << std::endl;
-    std::cout << random->getBrain()->getIdea(0) << std::endl;
+    // creating an object from animalArray[0] which is a Cat in this case
+
+    std::cout << "\n====Deep Copy====" << std::endl;
+    // deleting the array which contains the source of the "random" object;
+    // delete [] animalsArray;
+    std::cout << "Random Type: " << random->getType() << std::endl; // accessing the type
+    // accessing the Brain object which should not throw a problem
+    std::cout << "Random First Idea: " << random->getBrain()->getIdea(0) << std::endl;
     random->makeSound();
+
+    std::cout << "\n====Destruction===" << std::endl;
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 13:12:24 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 17:43:37 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,11 @@ Animal::Animal() : brain(nullptr)
 
 Animal &Animal::operator=(Animal &rhs)
 {
-    std::cout << "copy assignment operator of Animal\n"
-              << std::endl;
     if (this != &rhs)
     {
-        this->type.assign(rhs.type);
-        if (this->brain)
-            delete this->brain;
+        delete this->brain;
         this->brain = new Brain;
-        this->brain->setIdeas(rhs.getBrain()->getIdeas());
+        this->brain->operator=(*rhs.getBrain());
     }
     return (*this);
 }
@@ -52,10 +48,10 @@ std::string Animal::getType() const
 Animal::Animal(Animal &obj)
 {
     this->type.assign(obj.getType());
-    if (this == nullptr || this->brain)
-        std::cout << "\nam here\n";
+    if (this->brain)
+        delete this->brain;
     this->brain = new Brain;
-    obj.getBrain() ? this->brain->setIdeas(obj.getBrain()->getIdeas()) : (void)0;
+    this->brain->operator=(*obj.getBrain());
 }
 
 Animal::~Animal()

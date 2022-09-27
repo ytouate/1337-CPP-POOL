@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 18:01:51 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:07:01 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Cat::Cat() : Animal(), brain(new Brain)
     std::cout << "Cat Default Constructor Called" << std::endl;
 }
 
-Cat &Cat::operator=(Cat &rhs)
+Cat &Cat::operator=(const Cat &rhs)
 {
     if (this != &rhs)
     {
@@ -38,8 +38,12 @@ Cat &Cat::operator=(Cat &rhs)
     return (*this);
 }
 
-Cat::Cat(Cat &obj)
+Cat::Cat(const Cat &obj)
 {
+    if (this->brain)
+        delete this->brain;
+    this->brain = new Brain;
+    this->brain->operator=(*obj.getBrain());
     this->type = obj.type;
 }
 

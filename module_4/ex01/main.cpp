@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 17:58:39 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:11:36 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main()
             Cat *cat = new Cat;
             cat->fillIdeas();
             animalsArray[x]->operator=(*cat);
-            delete cat;
+            // delete cat;
         }
         else
         {
@@ -36,21 +36,22 @@ int main()
             Dog *dog = new Dog;
             dog->fillIdeas();
             animalsArray[x]->operator=(*dog);
-            delete dog;
+            // delete dog;
         }
     }
     std::cout << "\n====== IDEAS ======"
               << std::endl;
     std::cout << "\n====Copy Constructors====" << std::endl;
+    // creating an object from animalArray[0] which is a Cat in this case
     Animal *random = new Animal(*animalsArray[0]);
     for (int x = 0; x < ANIMALS_COUNT; x++)
     {
-        std::cout << animalsArray[x]->getBrain()->getIdea(0)
+        std::cout << "\nanimalsArray[x] Idea: "
+                  << animalsArray[x]->getBrain()->getIdea(0)
                   << std::endl;
+        // deleting the cat and dog object as if they were Animal objects
         delete animalsArray[x];
     }
-    // creating an object from animalArray[0] which is a Cat in this case
-
     std::cout << "\n====Deep Copy====" << std::endl;
     // deleting the array which contains the source of the "random" object;
     // delete [] animalsArray;
@@ -59,5 +60,6 @@ int main()
     std::cout << "Random First Idea: " << random->getBrain()->getIdea(0) << std::endl;
     random->makeSound();
     std::cout << "\n====Destruction===" << std::endl;
+    delete random;
     return 0;
 }

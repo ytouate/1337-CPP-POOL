@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:53:07 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 17:47:53 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:05:43 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ private:
 public:
     Dog();
     Dog(std::string type);
-    Dog(Dog &);
-    Dog &operator=(Dog &);
+    Dog(const Dog &);
+    Dog &operator=(const Dog &);
     Brain *getBrain(void) const;
     virtual void fillIdeas();
     void makeSound() const;

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/26 20:13:42 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:07:06 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ private:
 public:
     Cat();
     Cat(std::string type);
-    Cat(Cat &);
-    Cat &operator=(Cat &);
+    Cat(const Cat &);
+    Cat &operator=(const Cat &);
     Brain *getBrain(void) const;
     virtual void fillIdeas();
     void makeSound() const;

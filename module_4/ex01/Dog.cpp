@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 18:00:29 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:05:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Dog::Dog() : Animal(), brain(new Brain)
     std::cout << "Dog Default Constructor Called" << std::endl;
 }
 
-Dog &Dog::operator=(Dog &rhs)
+Dog &Dog::operator=(const Dog &rhs)
 {
     if (this != &rhs)
     {
@@ -42,7 +42,7 @@ void Dog::makeSound() const
     std::cout << "woof woof !" << std::endl;
 }
 
-Dog::Dog(Dog &obj)
+Dog::Dog(const Dog &obj)
 {
     this->type = obj.type;
 }

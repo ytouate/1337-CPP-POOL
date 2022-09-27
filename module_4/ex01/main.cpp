@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 17:45:53 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 17:58:39 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ int main()
     // accessing the Brain object which should not throw a problem
     std::cout << "Random First Idea: " << random->getBrain()->getIdea(0) << std::endl;
     random->makeSound();
-
     std::cout << "\n====Destruction===" << std::endl;
     return 0;
 }

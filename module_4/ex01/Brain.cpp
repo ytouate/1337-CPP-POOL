@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 17:41:05 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 17:57:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,6 @@ Brain::~Brain()
     std::cout << "Brain Destructor Called" << std::endl;
 }
 
-void Brain::setIdea(std::string idea, int index)
-{
-    if (index < 100 and index >= 0)
-    {
-        this->ideas[index] = idea;
-    }
-}
-
-void Brain::setIdeas(std::string *_ideas)
-{
-    for (int i = 0; i < 100; i++)
-    {
-        this->ideas[i] = _ideas[i];
-    }
-}
-
-std::string *Brain::getIdeas(void) const
-{
-    if (this == nullptr)
-        return nullptr;
-    std::string *temp = new std::string[100];
-    for (int i = 0; i < 100; i++)
-    {
-        temp[i] = this->ideas[i];
-    }
-    return (temp);
-}
-
 Brain &Brain::operator=(Brain &rhs)
 {
     for (int i = 0; i < 100; i++)
@@ -59,18 +31,13 @@ Brain &Brain::operator=(Brain &rhs)
     }
     return (*this);
 }
-std::ostream &operator<<(std::ostream &os, const Brain &obj)
+
+void Brain::setIdea(std::string idea, int index)
 {
-    std::string *_ideas;
-
-    _ideas = obj.getIdeas();
-    for (int i = 0; i < ANIMALS_COUNT; i++)
-    {
-        os << _ideas[i] << "\n";
-    }
-    return (os);
+    if (index > 100 or index < 0)
+        return;
+    this->ideas[index] = idea;
 }
-
 std::string Brain::getIdea(int index) const
 {
     if (this != nullptr)

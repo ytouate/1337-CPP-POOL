@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 18:05:59 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 23:11:34 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ Brain *Dog::getBrain() const
 
 void Dog::fillIdeas()
 {
-    for (int i = 0; i < ANIMALS_COUNT; i++)
+    for (int i = 0; i < 100; i++)
     {
         this->brain->setIdea("Dog Idea", i);
     }

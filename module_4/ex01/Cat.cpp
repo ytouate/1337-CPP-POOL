@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 18:13:28 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 23:11:38 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ Cat::~Cat()
 
 Brain *Cat::getBrain() const
 {
-    std::cout << "Cat::getBrain() called" << std::endl;
     return (this->brain);
 }
 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:29:55 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 18:25:57 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 23:16:33 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,14 @@ Brain &Brain::operator=(Brain &rhs)
 {
     for (int i = 0; i < 100; i++)
     {
-        std::cout << "this->idea" << this->ideas[i] << std::endl;
-        this->ideas[i] = rhs.ideas[i];
+        std::cout << "this->idea: " << rhs.getIdea(i) << std::endl;
+        this->ideas[i] = rhs.getIdea(i);
     }
     return (*this);
 }
 
 void Brain::setIdea(std::string idea, int index)
 {
-    if (index > 100 or index < 0)
-        return;
     this->ideas[index] = idea;
 }
 

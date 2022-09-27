@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 17:43:37 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 23:25:15 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Animal &Animal::operator=(Animal &rhs)
     {
         delete this->brain;
         this->brain = new Brain;
-        this->brain->operator=(*rhs.getBrain());
+        this->getBrain()->operator=(*(rhs.getBrain()));
     }
     return (*this);
 }
@@ -51,7 +51,7 @@ Animal::Animal(Animal &obj)
     if (this->brain)
         delete this->brain;
     this->brain = new Brain;
-    this->brain->operator=(*obj.getBrain());
+    this->brain->operator=(*(obj.getBrain()));
 }
 
 Animal::~Animal()
@@ -73,5 +73,6 @@ void Animal::fillIdeas()
 
 Brain *Animal::getBrain() const
 {
+    std::cout << "Animal::getBrain() called" << std::endl;
     return (this->brain);
 }

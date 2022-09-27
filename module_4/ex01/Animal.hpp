@@ -6,13 +6,12 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:36 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 12:05:53 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 13:12:29 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_H
 #define ANIMAL_H
-
 
 #include "Brain.hpp"
 #include <iostream>
@@ -24,6 +23,7 @@ class Animal
 {
 private:
     Brain *brain;
+
 protected:
     std::string type;
 
@@ -38,6 +38,5 @@ public:
     virtual Brain *getBrain() const;
     virtual ~Animal();
 };
-
 
 #endif

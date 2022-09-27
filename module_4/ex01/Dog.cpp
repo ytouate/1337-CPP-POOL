@@ -6,19 +6,19 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 12:04:03 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 13:12:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(std::string type) : Animal(), brain(new Brain())
+Dog::Dog(std::string type) : Animal(), brain(new Brain)
 {
     std::cout << "Dog Parametrize Constructor Called" << std::endl;
     this->type = type;
 }
 
-Dog::Dog() : Animal(), brain(new Brain())
+Dog::Dog() : Animal(), brain(new Brain)
 {
     this->type = "Dog";
     std::cout << "Dog Default Constructor Called" << std::endl;
@@ -26,7 +26,8 @@ Dog::Dog() : Animal(), brain(new Brain())
 
 Dog &Dog::operator=(Dog &rhs)
 {
-    std::cout << "copy assignment operator of Dog\n" << std::endl;
+    std::cout << "copy assignment operator of Dog\n"
+              << std::endl;
     this->type = rhs.type;
     return (*this);
 }

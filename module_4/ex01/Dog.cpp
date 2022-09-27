@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 23:11:34 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 23:32:00 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@ void Dog::makeSound() const
 
 Dog::Dog(const Dog &obj)
 {
+    if (this->getBrain())
+        delete this->brain;
+    this->brain = new Brain;
+    this->getBrain()->operator=(*obj.getBrain());
     this->type = obj.type;
 }
 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 23:11:38 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 23:31:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ Cat &Cat::operator=(const Cat &rhs)
 
 Cat::Cat(const Cat &obj)
 {
-    if (this->brain)
+    if (this->getBrain())
         delete this->brain;
     this->brain = new Brain;
-    this->brain->operator=(*obj.getBrain());
+    this->getBrain()->operator=(*obj.getBrain());
     this->type = obj.type;
 }
 

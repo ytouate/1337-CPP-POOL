@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 23:25:15 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/27 23:41:16 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,5 @@ void Animal::fillIdeas()
 
 Brain *Animal::getBrain() const
 {
-    std::cout << "Animal::getBrain() called" << std::endl;
     return (this->brain);
 }

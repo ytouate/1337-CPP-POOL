@@ -5,21 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/21 18:47:30 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/28 18:16:56 by ytouate          ###   ########.fr        #
+#    Created: 2022/09/28 18:16:30 by ytouate           #+#    #+#              #
+#    Updated: 2022/09/28 18:16:44 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
 	./main.cpp	\
-	./Cat.cpp	\
-	./Dog.cpp	\
-	./Brain.cpp	\
-	./Animal.cpp	\
-	./WrongAnimal.cpp\
-	./WrongCat.cpp	\
 
-NAME = ex01
+NAME = ex03
 
 CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98 
 

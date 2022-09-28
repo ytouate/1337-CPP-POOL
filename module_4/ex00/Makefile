@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 18:47:30 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/24 20:42:34 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/28 18:17:05 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FILE = \
 	./WrongAnimal.cpp\
 	./WrongCat.cpp	\
 
-NAME = Animal
+NAME = ex00
 
 CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 

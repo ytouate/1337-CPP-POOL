@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/28 13:50:05 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/28 13:58:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,19 +62,15 @@ int main()
     }
     std::cout << "\n====Deep Copy====" << std::endl;
     // accessing the type
-    // std::cout << "Random Type: " << random->getType() << std::endl;
     std::cout << "newCat Type: " << newCat->getType() << std::endl;
     std::cout << "newDog Type: " << newDog->getType() << std::endl;
     // accessing the brain objects via the getter and printing the first idea
-    // std::cout << "random First Idea: " << random->getBrain()->getIdea(0) << std::endl;
     std::cout << "newDog First Idea: " << newDog->getBrain()->getIdea(0) << std::endl;
     std::cout << "newCat First Idea: " << newCat->getBrain()->getIdea(0) << std::endl;
     // the virtual makeSound function
-    // random->makeSound();
     newCat->makeSound();
     newDog->makeSound();
     std::cout << "\n====Destruction===" << std::endl;
-    // delete random;
     delete newCat;
     delete newDog;
     return 0;

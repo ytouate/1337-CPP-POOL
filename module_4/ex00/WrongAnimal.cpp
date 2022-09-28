@@ -20,7 +20,7 @@ WrongAnimal::WrongAnimal(std::string type)
 
 WrongAnimal::WrongAnimal()
 {
-    this->type = "Default";
+    this->type = "WrongAnimal";
     std::cout << "WrongAnimal Default Constructor Called" << std::endl;
 }
 

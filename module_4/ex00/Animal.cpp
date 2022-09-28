@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/24 20:37:06 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/24 20:51:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Animal::Animal(std::string type)
 
 Animal::Animal()
 {
-    this->type = "Default";
+    this->type = "Animal";
     std::cout << "Animal Default Constructor Called" << std::endl;
 }
 

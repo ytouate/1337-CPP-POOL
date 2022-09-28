@@ -6,20 +6,20 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/28 13:55:48 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:12:39 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Cat::Cat(std::string type) : Animal(), brain(new Brain)
+Cat::Cat(std::string type) : AAnimal(), brain(new Brain)
 {
     std::cout << "Cat Parametrize Constructor Called" << std::endl;
     // this->brain = new Brain();
     this->type = type;
 }
 
-Cat::Cat() : Animal(), brain(new Brain)
+Cat::Cat() : AAnimal(), brain(new Brain)
 {
     this->type = "Cat";
     std::cout << "Cat Default Constructor Called" << std::endl;

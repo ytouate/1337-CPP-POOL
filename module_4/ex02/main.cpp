@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/28 13:58:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:12:29 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-    Animal *animalsArray[ANIMALS_COUNT];
+    AAnimal *animalsArray[ANIMALS_COUNT];
 
     std::cout << "\n====Array of Animals====" << std::endl;
     // creating the array of Animal Objects which half of it will

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/28 13:55:25 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:12:23 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "main.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 private:
     Brain *brain;

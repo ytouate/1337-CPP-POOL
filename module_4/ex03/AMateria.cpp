@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 18:44:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 17:36:52 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/29 18:16:35 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,12 @@ void AMateria::use(ICharacter &target)
               << target.getName() << "*"
               << std::endl;
 }
+
+AMateria::~AMateria()
+{
+    std::cout << "AMateria Destructor called" << std::endl;
+}
+
 
 std::string const &AMateria::getType() const
 {

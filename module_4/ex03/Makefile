@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 18:16:30 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/29 17:41:37 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/29 18:11:30 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ FILE = \
 	./main.cpp	\
 	./AMateria.cpp	\
 	./Cure.cpp		\
-	./Ice.cpp
+	./Ice.cpp		\
+	./Character.cpp	\
 
 NAME = ex03
 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:40:00 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 17:57:02 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/29 18:01:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ AMateria *Cure::clone() const
 
 void Cure::use(ICharacter &target)
 {
-    std::cout << this->getType()
-              << ": *shoots an ice bolt at "
+    std::cout << "Cure: *shoots an ice bolt at "
               << target.getName() << "*"
               << std::endl;
 }

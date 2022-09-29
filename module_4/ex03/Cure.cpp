@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/29 17:40:00 by ytouate           #+#    #+#             */
+/*   Updated: 2022/09/29 17:57:02 by ytouate          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cure.hpp"
+
+Cure::Cure() : AMateria()
+{
+    this->type = "cure";
+    std::cout << "Cure constructor called" << std::endl;
+}
+
+Cure::Cure(const std::string &type)
+{
+    std::cout << "Cure parametrize Constructor called" << std::endl;
+    this->type = type;
+}
+
+Cure &Cure::operator=(const Cure &rhs)
+{
+    this->type = rhs.type;
+    return (*this);
+}
+
+Cure::Cure(const Cure &obj)
+{
+    this->type = obj.type;
+}
+
+Cure::~Cure()
+{
+    std::cout << "Cure destructor called" << std::endl;
+}
+
+AMateria *Cure::clone() const
+{
+    return (new Cure);
+}
+
+void Cure::use(ICharacter &target)
+{
+    std::cout << this->getType()
+              << ": *shoots an ice bolt at "
+              << target.getName() << "*"
+              << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:04:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 18:37:20 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/29 20:20:37 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,11 @@ void Character::unequip(int idx)
     this->slots[idx] = nullptr;
 }
 
+Character::Character(std::string const &name)
+{
+    std::cout << "Character parametrize constructor called" << std::endl;
+    this->name = name;
+}
 void Character::use(int idx, ICharacter &target)
 {
     this->slots[idx]->use(target);

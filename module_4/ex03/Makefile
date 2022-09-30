@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 18:16:30 by ytouate           #+#    #+#              #
-#    Updated: 2022/09/29 18:11:30 by ytouate          ###   ########.fr        #
+#    Updated: 2022/09/29 20:21:35 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ FILE = \
 	./Cure.cpp		\
 	./Ice.cpp		\
 	./Character.cpp	\
+	./MateriaSource.cpp 	\
 
 NAME = ex03
 

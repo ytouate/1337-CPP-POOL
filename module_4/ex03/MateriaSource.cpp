@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 16:22:49 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 19:59:50 by ytouate          ###   ########.fr       */
+/*   Created: 2022/09/29 20:00:25 by ytouate           #+#    #+#             */
+/*   Updated: 2022/09/29 20:24:58 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
 
-IMateriaSource::~IMateriaSource()
+MateriaSource::~MateriaSource()
 {
-    std::cout << "IMateriaSource Destructor called" << std::endl;
+    std::cout << "MateriaSource destructor called" << std::endl;
+}
+
+MateriaSource::MateriaSource()
+{
+    std::cout << "MateriaSource constructor called" << std::endl;
+}
+
+void MateriaSource::learnMateria(AMateria *m)
+{
+    // TODO
+    (void)m;
+}
+
+AMateria *MateriaSource::createMateria(std::string const &type)
+{
 }

@@ -22,6 +22,7 @@ private:
     std::string name;
 public:
     Character();
+    Character(std::string const &);
     Character &operator=(const Character &);
     std::string const & getName() const;
     void equip(AMateria *m);

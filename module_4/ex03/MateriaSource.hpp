@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 20:00:43 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 20:15:36 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 16:25:08 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 class MateriaSource : public IMateriaSource
 {
 private:
-
+    int materia_count;
+    AMateria *materais[4];
 public:
     MateriaSource();
     MateriaSource(const MateriaSource &);

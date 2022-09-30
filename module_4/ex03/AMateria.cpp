@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 18:44:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 18:16:35 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 16:08:35 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ AMateria::AMateria(const AMateria &obj)
     this->type = obj.type;
 }
 
-AMateria &AMateria::operator=(AMateria &rhs)
+AMateria &AMateria::operator=(const AMateria &rhs)
 {
     this->type = rhs.type;
     return (*this);

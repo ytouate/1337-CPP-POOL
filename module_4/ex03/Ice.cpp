@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:02:15 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 18:02:23 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 16:41:05 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Ice::Ice() : AMateria()
 {
-    this->type = "Ice";
+    this->type = "ice";
     std::cout << "Ice constructor called" << std::endl;
 }
 

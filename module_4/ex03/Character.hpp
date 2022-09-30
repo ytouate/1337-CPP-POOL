@@ -21,7 +21,6 @@ private:
     AMateria *slots[4];
     std::string name;
 public:
-    Character();
     Character(std::string const &);
     Character &operator=(const Character &);
     std::string const & getName() const;

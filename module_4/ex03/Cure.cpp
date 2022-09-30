@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:40:00 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 16:16:36 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 20:46:38 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Cure::Cure() : AMateria()
 {
-    this->type = "cure";
     std::cout << "Cure constructor called" << std::endl;
+    this->type = "cure";
 }
 
 Cure::Cure(const std::string &type)
@@ -26,6 +26,7 @@ Cure::Cure(const std::string &type)
 
 Cure &Cure::operator=(const Cure &rhs)
 {
+    std::cout << "Cure::operator called" << std::endl;
     this->type = rhs.type;
     return (*this);
 }
@@ -38,7 +39,7 @@ Cure::Cure(const Cure &obj)
 
 Cure::~Cure()
 {
-    std::cout << "Cure destructor called" << std::endl;
+    // std::cout << "Cure destructor called" << std::endl;
 }
 
 AMateria *Cure::clone() const

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 18:17:13 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 16:45:35 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 20:45:21 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,11 @@ int main()
     ICharacter *me = new Character("me");
     AMateria *tmp;
     tmp = src->createMateria("ice");
-    (void)me;
+    tmp = src->createMateria("ice");
     me->equip(tmp);
     tmp = src->createMateria("cure");
     me->equip(tmp);
     ICharacter *bob = new Character("bob");
-    (void)bob;
     me->use(0, *bob);
     me->use(1, *bob);
     delete bob;

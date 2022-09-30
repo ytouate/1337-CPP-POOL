@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:02:15 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 16:41:05 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 20:46:46 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,10 @@ Ice::Ice() : AMateria()
     std::cout << "Ice constructor called" << std::endl;
 }
 
-Ice::Ice(const std::string &type)
-{
-    std::cout << "Ice parametrize Constructor called" << std::endl;
-    this->type = type;
-}
-
 Ice &Ice::operator=(const Ice &rhs)
 {
-    this->type = rhs.type;
+    std::cout << "Ice::operator called" << std::endl;
+    (void)rhs;
     return (*this);
 }
 

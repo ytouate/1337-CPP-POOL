@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:02:30 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 18:03:20 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 18:03:22 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Ice : public AMateria
 {
 private:
-    /* data */
 public:
     Ice();
     Ice(const std::string &type);

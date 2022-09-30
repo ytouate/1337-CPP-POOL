@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 18:44:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 16:08:35 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 20:44:36 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,6 @@
 AMateria::AMateria()
 {
     std::cout << "AMateria Default Constructor called" << std::endl;
-    this->type = "Default Type";
-}
-
-AMateria::AMateria(std::string const &type)
-{
-    std::cout << "AMateria Parametrize Constructor called" << std::endl;
-    this->type = type;
 }
 
 AMateria::AMateria(const AMateria &obj)
@@ -29,9 +22,17 @@ AMateria::AMateria(const AMateria &obj)
     this->type = obj.type;
 }
 
-AMateria &AMateria::operator=(const AMateria &rhs)
+AMateria &AMateria::operator=(const IMateriaSource &rhs)
 {
-    this->type = rhs.type;
+    (void)rhs;
+    std::cout << "AMateria::operator called" << std::endl;
+    return (*this);
+}
+
+AMateria &AMateria::operator=(AMateria *rhs)
+{
+    (void)rhs;
+    std::cout << "AMateria::operator called" << std::endl;
     return (*this);
 }
 

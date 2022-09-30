@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 16:22:51 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 16:24:07 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 18:38:29 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define MateriaSource_HPP
 
 #include "AMateria.hpp"
-
+class AMateria;
 class IMateriaSource
 {
 public:

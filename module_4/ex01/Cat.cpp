@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 23:31:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/30 22:07:32 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ Cat::Cat(std::string type) : Animal(), brain(new Brain)
     // this->brain = new Brain();
     this->type = type;
 }
+
+using namespace std;
 
 Cat::Cat() : Animal(), brain(new Brain)
 {

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:26 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/27 23:43:45 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/01 13:55:17 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int main()
     Animal *random = new Animal(*animalsArray[0]);
     Cat *randomCat = new Cat("Mocha");
     Dog *randomDog = new Dog("Kelb");
+    randomCat->fillIdeas();
+    randomDog->fillIdeas();
     Cat *newCat = new Cat(*randomCat);
     Dog *newDog = new Dog(*randomDog);
     

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:38:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 20:00:25 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/02 20:07:28 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 Bureaucrat::Bureaucrat(const std::string &_name, short int _grade) : name(_name)
 {
     if (_grade < 0)
-    {
         throw Bureaucrat::gradeTooLow;
-    }
     if (grade > 150)
-        // throw Bureaucrat::GradeTooHighException
-        this->grade = _grade;
+        throw Bureaucrat::gradeTooHigh;
+    this->grade = _grade;
 }
 
 const std::string &Bureaucrat::getName(void) const
@@ -58,10 +56,10 @@ std::ostream &operator<<(std::ostream &os, const Bureaucrat &rhs)
 Bureaucrat &Bureaucrat::operator--(void)
 {
     short int temp = this->getGrade() + 1;
-    if (temp < 1 or temp > 150)
-    {
-        // raise an exception
-    }
+    if (temp < 0)
+        throw Bureaucrat::gradeTooLow;
+    if (temp > 150)
+        throw Bureaucrat::gradeTooHigh;
     this->grade++;
     return *this;
 }
@@ -69,10 +67,10 @@ Bureaucrat &Bureaucrat::operator--(void)
 Bureaucrat &Bureaucrat::operator++(void)
 {
     short int temp = this->grade - 1;
-    if (temp < 1 or temp > 150)
-    {
-        // raise exception
-    }
+    if (temp < 0)
+        throw Bureaucrat::gradeTooLow;
+    if (temp > 150)
+        throw Bureaucrat::gradeTooHigh;
     this->grade--;
     return *this;
 }

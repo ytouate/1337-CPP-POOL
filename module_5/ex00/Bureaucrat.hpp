@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:29:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 19:53:52 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/02 20:05:41 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "GradeTooLowException.hpp"
+#include "GradeTooHighException.hpp"
 
 class Bureaucrat
 {
@@ -22,6 +23,7 @@ private:
     const std::string name;
     short int grade;
     GradeTooLowException gradeTooLow;
+    GradeTooHighException gradeTooHigh;
 public:
     Bureaucrat(const std::string &, short int);
     Bureaucrat(const Bureaucrat &);

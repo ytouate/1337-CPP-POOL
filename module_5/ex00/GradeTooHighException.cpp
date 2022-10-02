@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   GradeTooHighException.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 20:08:00 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/02 20:02:32 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/02 20:03:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "GradeTooHighException.hpp"
 
-int main()
+const char *GradeTooHighException::what() const _NOEXCEPT
 {
-    Bureaucrat a("name", 1);
-    
+    return "Grade Too Hihg";
 }

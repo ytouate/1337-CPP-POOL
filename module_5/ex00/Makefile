@@ -6,14 +6,15 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 18:45:33 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/02 19:57:17 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/02 20:03:15 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
 	./main.cpp	\
 	./Bureaucrat.cpp	\
-	./GradeTooLowException.cpp
+	./GradeTooLowException.cpp	\
+	./GradeTooHighException.cpp
 
 NAME = ex00
 

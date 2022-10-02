@@ -6,24 +6,21 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:38:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 18:58:46 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/02 20:00:25 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : name("")
-{
-    this->grade = 0;
-}
-
 Bureaucrat::Bureaucrat(const std::string &_name, short int _grade) : name(_name)
 {
-    if (grade < 0)
-        // throw Bureaucrat::GradeTooLowException;
+    if (_grade < 0)
+    {
+        throw Bureaucrat::gradeTooLow;
+    }
     if (grade > 150)
         // throw Bureaucrat::GradeTooHighException
-    this->grade = _grade;
+        this->grade = _grade;
 }
 
 const std::string &Bureaucrat::getName(void) const
@@ -36,6 +33,10 @@ short int Bureaucrat::getGrade(void) const
     return this->grade;
 }
 
+Bureaucrat::~Bureaucrat()
+{
+}
+
 Bureaucrat::Bureaucrat(const Bureaucrat &obj) : name(obj.getName())
 {
     this->grade = obj.getGrade();
@@ -44,6 +45,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &obj) : name(obj.getName())
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
     this->grade = rhs.getGrade();
+    return *this;
 }
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &rhs)

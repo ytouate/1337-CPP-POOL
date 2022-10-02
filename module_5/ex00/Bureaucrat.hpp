@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:29:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 18:49:59 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/02 19:53:52 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "GradeTooLowException.hpp"
 
 class Bureaucrat
 {
 private:
     const std::string name;
     short int grade;
-
+    GradeTooLowException gradeTooLow;
 public:
-    Bureaucrat();
     Bureaucrat(const std::string &, short int);
     Bureaucrat(const Bureaucrat &);
     Bureaucrat & operator = (const Bureaucrat &);

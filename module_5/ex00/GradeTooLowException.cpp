@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   GradeTooLowException.cpp                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 20:00:55 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/02 19:48:22 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/02 19:57:47 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "GradeTooLowException.hpp"
 
-int main()
+const char *GradeTooLowException::what() const _NOEXCEPT
 {
-    Bureaucrat a("name", -1);
-    
+    return "Grade Too Low";
 }

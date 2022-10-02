@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   GradeTooHighException.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 21:25:14 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/02 20:02:11 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/02 20:06:30 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#if !defined(GRADE_TOO_HIGH_EXCEPTION)
+#define GRADE_TOO_HIGH_EXCEPTION
 
-int main()
+#include <iostream>
+
+class GradeTooHighException : public std::exception
 {
-    Bureaucrat a("name 1: ", 3);
-    Bureaucrat b("name 2: ", 149);
-    Bureaucrat c("name 2: ", 1);
-    a++;
-    b--;
-    try
-    {
-        b--;
-    }
-    catch (std::exception)
-    {
-        std::cout << "Exception Handeled" << std::endl;
-    }
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << c << std::endl;
-}
+private:
+public:
+    const char *what() const _NOEXCEPT;;
+};
+
+#endif // GRADE_TOO_LOW_EXCEPTION

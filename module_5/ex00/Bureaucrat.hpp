@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:29:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 20:05:41 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/02 20:47:45 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ public:
     Bureaucrat & operator = (const Bureaucrat &);
     const std::string &getName( void ) const;
     short int getGrade( void ) const;
-    Bureaucrat & operator -- ( void );
-    Bureaucrat & operator ++ ( void );
+    Bureaucrat & operator -- ( int );
+    Bureaucrat & operator ++ ( int );
     ~Bureaucrat();
 };
 

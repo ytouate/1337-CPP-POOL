@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   GradeTooHighException.hpp                          :+:      :+:    :+:   */
+/*   GradeTooHighException.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 20:02:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 16:49:16 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/02 20:02:32 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/02 20:03:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(GRADE_TOO_HIGH_EXCEPTION)
-#define GRADE_TOO_HIGH_EXCEPTION
+#include "GradeTooHighException.hpp"
 
-#include <iostream>
-
-class GradeTooHighException : public std::exception
+const char *GradeTooHighException::what() const _NOEXCEPT
 {
-private:
-public:
-    const char *what() const _NOEXCEPT;
-};
-
-#endif // GRADE_TOO_LOW_EXCEPTION
+    return "Grade Too Hihg";
+}

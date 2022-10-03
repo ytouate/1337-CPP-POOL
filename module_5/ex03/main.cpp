@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   GradeTooHighException.hpp                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 20:02:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 16:49:16 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/03 20:03:21 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(GRADE_TOO_HIGH_EXCEPTION)
-#define GRADE_TOO_HIGH_EXCEPTION
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
-#include <iostream>
-
-class GradeTooHighException : public std::exception
+int main()
 {
-private:
-public:
-    const char *what() const _NOEXCEPT;
-};
-
-#endif // GRADE_TOO_LOW_EXCEPTION
+    Intern randomIntern;
+    Form *reff;
+    
+    reff = randomIntern.makeForm("robotomy request", "Youssef");
+    
+}

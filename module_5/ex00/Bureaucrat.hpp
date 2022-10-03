@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:29:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 20:47:45 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 16:49:04 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,18 @@ private:
     short int grade;
     GradeTooLowException gradeTooLow;
     GradeTooHighException gradeTooHigh;
+
 public:
     Bureaucrat(const std::string &, short int);
     Bureaucrat(const Bureaucrat &);
-    Bureaucrat & operator = (const Bureaucrat &);
-    const std::string &getName( void ) const;
-    short int getGrade( void ) const;
-    Bureaucrat & operator -- ( int );
-    Bureaucrat & operator ++ ( int );
+    Bureaucrat &operator=(const Bureaucrat &);
+    const std::string &getName(void) const;
+    short int getGrade(void) const;
+    Bureaucrat &operator--(int);
+    Bureaucrat &operator++(int);
     ~Bureaucrat();
 };
 
-std::ostream & operator << (std::ostream &os, const Bureaucrat &rhs);
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &rhs);
 
 #endif

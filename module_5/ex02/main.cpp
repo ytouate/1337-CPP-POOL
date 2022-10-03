@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 17:11:34 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 17:18:56 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ int main()
         d.signForm(RobotForm);
         d.signForm(PresidentialForm);
         std::cout << "\n==== doWork() and execute() tests====" << std::endl;
-        ShrubberyForm.execute(a);
-        RobotForm.execute(b);
-        PresidentialForm.execute(c);
+        a.executeForm(ShrubberyForm);
+        b.executeForm(RobotForm);
+        c.executeForm(PresidentialForm);
     }
     catch (std::exception &exp)
     {

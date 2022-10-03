@@ -6,18 +6,23 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 18:45:33 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/03 13:12:34 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/03 19:59:36 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
-	./main.cpp	\
-	./Bureaucrat.cpp	\
-	./GradeTooLowException.cpp	\
-	./GradeTooHighException.cpp	\
-	./Form.cpp
+	./main.cpp						\
+	./Bureaucrat.cpp				\
+	./GradeTooLowException.cpp		\
+	./GradeTooHighException.cpp		\
+	./Form.cpp						\
+	./PresidentialPardonForm.cpp	\
+	./RobotomyRequestForm.cpp		\
+	./ShrubberyCreationForm.cpp		\
+	./Intern.cpp
+	
 
-NAME = ex01
+NAME = ex03
 
 CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98 #-fsanitize=address -g
 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:29:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 11:10:35 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 16:47:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ private:
 public:
     Bureaucrat(const std::string &, short int);
     Bureaucrat(const Bureaucrat &);
-    Bureaucrat & operator = (const Bureaucrat &);
-    const std::string &getName( void ) const;
-    short int getGrade( void ) const;
-    Bureaucrat & operator -- ( int );
+    Bureaucrat &operator=(const Bureaucrat &);
+    const std::string &getName(void) const;
+    short int getGrade(void) const;
+    Bureaucrat &operator--(int);
     void signForm(Form &);
-    Bureaucrat & operator ++ ( int );
+    Bureaucrat &operator++(int);
     ~Bureaucrat();
 };
 
-std::ostream & operator << (std::ostream &os, const Bureaucrat &rhs);
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &rhs);
 
 #endif

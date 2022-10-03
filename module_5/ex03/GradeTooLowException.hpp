@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   GradeTooHighException.hpp                          :+:      :+:    :+:   */
+/*   GradeTooLowException.hpp                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 20:02:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 16:49:16 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/02 19:48:26 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/02 19:56:37 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(GRADE_TOO_HIGH_EXCEPTION)
-#define GRADE_TOO_HIGH_EXCEPTION
+#if !defined(GRADE_TOO_LOW_EXCEPTION)
+#define GRADE_TOO_LOW_EXCEPTION
 
 #include <iostream>
 
-class GradeTooHighException : public std::exception
+class GradeTooLowException : public std::exception
 {
 private:
 public:

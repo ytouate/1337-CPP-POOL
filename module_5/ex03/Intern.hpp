@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 13:19:13 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:12:59 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/03 17:25:10 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/03 20:10:55 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(PRESIDENTIALPARDONFORM_HPP)
-#define PRESIDENTIALPARDONFORM_HPP
+#if !defined(INTERN_HPP)
+#define INTERN_HPP
 
-#include <fstream>
 #include <iostream>
-#include "Form.hpp"
 
-class PresidentialPardonForm : public Form
+#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+
+class Intern
 {
 private:
+    
 public:
-    PresidentialPardonForm(const std::string &_name);
-    PresidentialPardonForm(const PresidentialPardonForm &);
-    PresidentialPardonForm & operator = (const PresidentialPardonForm &);
-    void doWork(const std::string &target) const;
-    ~PresidentialPardonForm();
+    Intern();
+    Intern(const Intern &);
+    Intern & operator = (const Intern &);
+    Form * makeForm(const std::string &, const std::string &);
+    ~Intern();
 };
 
-#endif // PRESIDENTIALPARDONFORM_HPP
+#endif // INTERN_HPP

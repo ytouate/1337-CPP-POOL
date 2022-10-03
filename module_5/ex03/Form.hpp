@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:27:25 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 16:47:54 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 19:57:23 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ public:
     short int getSignGrade(void) const;
     short int getExcuteGrade(void) const;
     void beSigned(Bureaucrat &);
+    virtual void doWork(const std::string &target) const = 0;
     Form(const Form &);
+    void execute(Bureaucrat const &executor) const;
     Form &operator=(const Form &);
-    ~Form();
+    virtual ~Form();
 };
 
 std::ostream &operator<<(std::ostream &, const Form &);

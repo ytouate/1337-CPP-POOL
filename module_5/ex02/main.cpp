@@ -6,29 +6,19 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 13:09:51 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 14:56:32 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
-    try
-    {
-        Form myForm("Form", 12, 14);
-        Bureaucrat obj("Youssef", 150);
-        std::cout << "\n==== Form Data ====" << std::endl;
-        std::cout << myForm << std::endl;
-        std::cout << "\n==== Bureaucrat Data ====" << std::endl;
-        std::cout << obj << std::endl;
-        std::cout << "\n==== Form signing ====" << std::endl;
-        obj.signForm(myForm);
-    }
-    catch (std::exception &exp)
-    {
-        std::cout << "Program Terminated because "
-                  << exp.what() << std::endl;
-    }
+    Bureaucrat obj("obj", 146);
+    ShrubberyCreationForm myForm("Name");
+    obj.signForm(myForm);
 }

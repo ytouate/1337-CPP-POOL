@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:13 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 13:31:24 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 15:01:26 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ private:
     
 public:
     ShrubberyCreationForm(const std::string &_name);
+    void beSigned(Bureaucrat &);
+    void doWork(const std::string &target);
     ~ShrubberyCreationForm();
 };
 

@@ -6,20 +6,24 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:20:25 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 13:21:09 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 15:14:24 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #if !defined(ROBOTOMY_REQUESTED_FORM_HPP)
 #define ROBOTOMY_REQUESTED_FORM_HPP
 
-class RobotomyRequestForm
+#include <iostream>
+#include "Form.hpp"
+
+class RobotomyRequestForm : public Form
 {
 private:
     
 public:
-    RobotomyRequestForm();
+    RobotomyRequestForm(const std::string &_name);
     ~RobotomyRequestForm();
+    void doWork(const std::string &target);
 };
 
 #endif // ROBOTOMY_REQUESTED_FORM_HPP

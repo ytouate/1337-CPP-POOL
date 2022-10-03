@@ -6,19 +6,24 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:19:13 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 13:20:15 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 15:32:53 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #if !defined(PRESIDENTIALPARDONFORM_HPP)
 #define PRESIDENTIALPARDONFORM_HPP
 
-class PresidentialPardonForm
+#include <fstream>
+#include <iostream>
+#include "Form.hpp"
+
+class PresidentialPardonForm : public Form
 {
 private:
     
 public:
-    PresidentialPardonForm();
+    PresidentialPardonForm(const std::string &_name);
+    void doWork(const std::string &target) const;
     ~PresidentialPardonForm();
 };
 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 13:10:25 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 15:33:42 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,13 @@ void Form::beSigned(Bureaucrat &obj)
         this->isSigned = true;
 }
 
+void Form::execute(Bureaucrat const &executor) const
+{
+    if (this->isSigned and executor.getGrade() <= this->executeGrade)
+        this->doWork(executor.getName());
+    else
+        throw GradeTooLowException();
+}
 std::ostream &operator<<(std::ostream &os, const Form &obj)
 {
     std::string status = obj.getSigningStatus() ? "Signed" : "Not Signed";

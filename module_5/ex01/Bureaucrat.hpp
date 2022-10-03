@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:29:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 23:11:15 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 11:10:35 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
     const std::string &getName( void ) const;
     short int getGrade( void ) const;
     Bureaucrat & operator -- ( int );
-    void signForm();
+    void signForm(Form &);
     Bureaucrat & operator ++ ( int );
     ~Bureaucrat();
 };

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 23:16:32 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 12:23:16 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Form::Form(const std::string _name, short int _signGrade, short int _excuteGrade) : name(_name), isSigned(false)
 {
-    if (_signGrade > 150 or _signGrade < 150)
+    if (_signGrade > 150 or _signGrade > 150)
         throw GradeTooLowException();
     else if (_signGrade < 1 or _excuteGrade < 1)
         throw GradeTooHighException();
@@ -73,10 +73,13 @@ void Form::beSigned(Bureaucrat &obj)
 
 std::ostream &operator<<(std::ostream &os, const Form &obj)
 {
-    os << "Name : " << obj.getName()
-       << "Excution Grade: " << obj.getExcuteGrade()
-       << "Signing Grade: " << obj.getSignGrade()
-       << "Form Status: " << obj.getSigningStatus();
+    std::string status = obj.getSigningStatus() ? "Signed" : "Not Signed";
+    os << "Name:\t\t" << obj.getName()
+       << "\nExcution Grade: " << obj.getExcuteGrade()
+       << "\nSigning Grade:\t" << obj.getSignGrade()
+       << "\nForm Status:\t" << obj.getSigningStatus()
+       << " (" << status << ")";
+    return os;
 }
 Form::~Form()
 {

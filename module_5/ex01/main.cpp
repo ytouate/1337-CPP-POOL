@@ -6,28 +6,37 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 21:47:52 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 11:34:31 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
-    Bureaucrat a("name 1: ", 3);
-    Bureaucrat b("name 2: ", 149);
-    Bureaucrat c("name 2: ", 1);
-    a++;
-    b--;
     try
     {
-        b--;
+        Form myForm("Form", 12, 14);
+        Bureaucrat obj("Youssef", 12);
+        std::cout << "\n==== Form Data ====" << std::endl;
+        std::cout << myForm << std::endl;
+        std::cout << "\n==== Bureaucrat Data ====" << std::endl;
+        std::cout << obj << std::endl;
+        std::cout << "\n==== Form signing ====" << std::endl;
+        try
+        {
+            obj.signForm(myForm);
+        }
+        catch (std::exception &exp)
+        {
+            std::cerr << "failed to sign the form because "
+                      << exp.what() << std::endl;
+        }
     }
-    catch (std::exception)
+    catch (std::exception &exp)
     {
-        std::cout << "Exception Handeled" << std::endl;
+        std::cout << "Program Terminated because "
+                  << exp.what() << std::endl;
     }
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << c << std::endl;
 }

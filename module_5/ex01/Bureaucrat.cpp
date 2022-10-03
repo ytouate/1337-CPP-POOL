@@ -6,11 +6,12 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:38:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 23:11:00 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 11:33:01 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(const std::string &_name, short int _grade) : name(_name)
 {
@@ -21,9 +22,21 @@ Bureaucrat::Bureaucrat(const std::string &_name, short int _grade) : name(_name)
     this->grade = _grade;
 }
 
-void Bureaucrat::signForm()
+void Bureaucrat::signForm(Form &obj)
 {
-    
+    try
+    {
+        obj.beSigned(*this);
+        std::cout << this->getName() << " signed " << obj.getName() << std::endl;
+    }
+    catch (std::exception &exp)
+    {
+        std::cerr << this->name
+                  << " couldn't sign "
+                  << obj.getName()
+                  << " because "
+                  << exp.what() << std::endl;
+    }
 }
 const std::string &Bureaucrat::getName(void) const
 {
@@ -52,8 +65,9 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &rhs)
 {
-    os << rhs.getName() << ", "
-       << "bureaucrat grade " << rhs.getGrade();
+    os << "Name:\t\t\t" << rhs.getName()
+       << "\nbureaucrat grade:\t"
+       << rhs.getGrade();
     return (os);
 }
 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 16:49:50 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 17:09:31 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void Form::beSigned(Bureaucrat &obj)
 
 void Form::execute(Bureaucrat const &executor) const
 {
+    std::cout << this->executeGrade << std::endl;
     if (this->isSigned and executor.getGrade() <= this->executeGrade)
         this->doWork(executor.getName());
     else

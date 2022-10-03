@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:19:13 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 15:32:53 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 16:50:31 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 class PresidentialPardonForm : public Form
 {
 private:
-    
 public:
     PresidentialPardonForm(const std::string &_name);
     void doWork(const std::string &target) const;

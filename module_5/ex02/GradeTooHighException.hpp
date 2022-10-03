@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:02:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 20:06:30 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 16:50:11 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class GradeTooHighException : public std::exception
 {
 private:
 public:
-    const char *what() const _NOEXCEPT;;
+    const char *what() const _NOEXCEPT;
 };
 
 #endif // GRADE_TOO_LOW_EXCEPTION

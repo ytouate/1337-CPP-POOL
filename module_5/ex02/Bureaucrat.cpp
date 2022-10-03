@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:38:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 13:10:30 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 16:49:36 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ short int Bureaucrat::getGrade(void) const
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << this->getName() << " Destructored" << std::endl;
+    return;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &obj) : name(obj.getName())

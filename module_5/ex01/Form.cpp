@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 12:23:16 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/03 13:10:25 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,8 @@ std::ostream &operator<<(std::ostream &os, const Form &obj)
        << " (" << status << ")";
     return os;
 }
+
 Form::~Form()
 {
+    std::cout << this->getName() << " Destructored" << std::endl;
 }

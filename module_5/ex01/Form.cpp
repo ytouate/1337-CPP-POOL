@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 11:41:51 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 15:35:54 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Form::Form(const std::string _name, short int _signGrade, short int _excuteGrade)
     : name(_name), isSigned(false), signGrade(_signGrade), executeGrade(_excuteGrade)
 {
-    if (_signGrade > 150 or _signGrade > 150)
+    if (_signGrade > 150 or _excuteGrade > 150)
         throw GradeTooLowException();
     else if (_signGrade < 1 or _excuteGrade < 1)
         throw GradeTooHighException();

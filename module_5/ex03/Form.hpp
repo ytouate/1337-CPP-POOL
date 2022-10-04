@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:27:25 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 19:57:23 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 11:52:55 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Form
 private:
     const std::string name;
     bool isSigned;
-    short int signGrade;
-    short int executeGrade;
+    short const int signGrade;
+    short const int executeGrade;
 
 public:
     Form(const std::string _name, short int _signGrade, short int _excuteGrade);

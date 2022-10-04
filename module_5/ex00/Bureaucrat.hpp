@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:29:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 16:49:04 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 11:32:51 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ class Bureaucrat
 private:
     const std::string name;
     short int grade;
-    GradeTooLowException gradeTooLow;
-    GradeTooHighException gradeTooHigh;
 
 public:
     Bureaucrat(const std::string &, short int);

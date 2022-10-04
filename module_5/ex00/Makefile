@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 18:45:33 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/02 20:03:15 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/04 11:33:57 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FILE = \
 
 NAME = ex00
 
-CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98 #-fsanitize=address -g
+CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 
 O_FILE = $(FILE:.cpp=.o)
 

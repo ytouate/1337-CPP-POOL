@@ -6,23 +6,19 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 17:19:51 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 11:57:45 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(const std::string _name, short int _signGrade, short int _excuteGrade) : name(_name), isSigned(false)
+Form::Form(const std::string _name, short int _signGrade, short int _excuteGrade)
+    : name(_name), isSigned(false), signGrade(_signGrade), executeGrade(_excuteGrade)
 {
     if (_signGrade > 150 or _signGrade > 150)
         throw GradeTooLowException();
     else if (_signGrade < 1 or _excuteGrade < 1)
         throw GradeTooHighException();
-    else
-    {
-        this->signGrade = _signGrade;
-        this->executeGrade = _excuteGrade;
-    }
 }
 
 const std::string &Form::getName() const
@@ -45,21 +41,19 @@ short int Form::getExcuteGrade() const
     return this->executeGrade;
 }
 
-Form::Form(const Form &obj) : name(obj.getName())
+Form::Form(const Form &obj)
+    : name(obj.getName()), isSigned(obj.getSigningStatus()),
+      signGrade(obj.getSignGrade()), executeGrade(obj.getExcuteGrade())
 {
-    this->isSigned = obj.getSigningStatus();
-    this->executeGrade = obj.getExcuteGrade();
-    this->signGrade = obj.getSignGrade();
+    if (obj.getSignGrade() > 150 or obj.getExcuteGrade() > 150)
+        throw GradeTooLowException();
+    else if (obj.getSignGrade() < 1 or obj.getExcuteGrade() < 1)
+        throw GradeTooHighException();
 }
 
 Form &Form::operator=(const Form &rhs)
 {
-    if (this != &rhs)
-    {
-        this->isSigned = rhs.getSigningStatus();
-        this->executeGrade = rhs.getExcuteGrade();
-        this->signGrade = rhs.getSignGrade();
-    }
+    (void)rhs;
     return (*this);
 }
 

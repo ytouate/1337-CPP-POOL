@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:38:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 16:47:41 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 11:59:47 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 Bureaucrat::Bureaucrat(const std::string &_name, short int _grade) : name(_name)
 {
     if (_grade < 1)
-        throw Bureaucrat::gradeTooLow;
+        throw GradeTooHighException();
     else if (_grade > 150)
-        throw Bureaucrat::gradeTooHigh;
+        throw GradeTooLowException();
     this->grade = _grade;
 }
 
@@ -77,9 +77,9 @@ Bureaucrat &Bureaucrat::operator--(int a)
     (void)a;
     short int temp = this->getGrade() + 1;
     if (temp < 1)
-        throw Bureaucrat::gradeTooLow;
+        throw GradeTooHighException();
     if (temp > 150)
-        throw Bureaucrat::gradeTooHigh;
+        throw GradeTooLowException();
     this->grade++;
     return *this;
 }
@@ -89,9 +89,9 @@ Bureaucrat &Bureaucrat::operator++(int a)
     (void)a;
     short int temp = this->grade - 1;
     if (temp < 1)
-        throw Bureaucrat::gradeTooLow;
+        throw GradeTooHighException();
     if (temp > 150)
-        throw Bureaucrat::gradeTooHigh;
+        throw GradeTooLowException();
     this->grade--;
     return *this;
 }

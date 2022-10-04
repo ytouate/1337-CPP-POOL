@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/02 21:25:14 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 11:35:08 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int main()
 {
     Bureaucrat a("name 1: ", 3);
-    Bureaucrat b("name 2: ", 149);
+    Bureaucrat b("name 2: ", 150);
     Bureaucrat c("name 2: ", 1);
-    a++;
-    b--;
     try
     {
         b--;
+        a++;
+        c++;
     }
     catch (std::exception)
     {

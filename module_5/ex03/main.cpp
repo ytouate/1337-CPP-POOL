@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:03:21 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:47:19 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int main()
     Intern randomIntern;
     Form *reff;
     
-    reff = randomIntern.makeForm("robotomy request", "Youssef");
-    
+    reff = randomIntern.makeForm("presidential pardon form", "Youssef");
+    std::cout << *reff << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:19:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:19:12 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:43:28 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &obj
     : Form(obj.getName(), 25, 5)
 {
     (void)obj;
+}
+
+Form *  PresidentialPardonForm::clone()
+{
+    return new PresidentialPardonForm(this->getName());
 }
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &rhs)

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:27:25 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 11:52:55 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:41:55 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ public:
     void beSigned(Bureaucrat &);
     virtual void doWork(const std::string &target) const = 0;
     Form(const Form &);
+    virtual Form * clone() = 0;
     void execute(Bureaucrat const &executor) const;
     Form &operator=(const Form &);
     virtual ~Form();

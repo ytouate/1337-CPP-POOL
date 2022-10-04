@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:58 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:23:23 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:43:44 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string &_name)
 void ShrubberyCreationForm::beSigned(Bureaucrat &obj)
 {
     Form::beSigned(obj);
+}
+
+Form *  ShrubberyCreationForm::clone()
+{
+    return new ShrubberyCreationForm(this->getName());
 }
 
 void ShrubberyCreationForm::doWork(const std::string &target) const

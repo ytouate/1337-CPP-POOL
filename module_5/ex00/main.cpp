@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 11:35:08 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:49:49 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 int main()
 {
-    Bureaucrat a("name 1: ", 3);
-    Bureaucrat b("name 2: ", 150);
-    Bureaucrat c("name 2: ", 1);
+    Bureaucrat a("A: ", 3);
+    Bureaucrat b("B: ", 150);
+    Bureaucrat c("C: ", 1);
+    
     try
     {
-        b--;
         a++;
+        b--;
         c++;
     }
-    catch (std::exception)
+    catch (std::exception &exp)
     {
-        std::cout << "Exception Handeled" << std::endl;
+        std::cout << "Failed to Decrement or Increment objects Because"
+                  << exp.what() << std::endl;
     }
     std::cout << a << std::endl;
     std::cout << b << std::endl;

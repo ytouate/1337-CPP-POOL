@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:52 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:22:53 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:57:07 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,14 @@ void RobotomyRequestForm::doWork(const std::string &target) const
               << target << " has been robotomized succfully " << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string &_name) : Form(_name, 72, 45) {}
+Form *RobotomyRequestForm::clone()
+{
+    return new RobotomyRequestForm(this->getName());
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const std::string &_name)
+    : Form(_name, 72, 45) {}
+
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &obj)
     : Form(obj.getName(), 72, 45)

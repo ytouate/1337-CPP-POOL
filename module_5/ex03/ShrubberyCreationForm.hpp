@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:13 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:24:27 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:42:16 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
     ShrubberyCreationForm(const ShrubberyCreationForm &obj);
     ShrubberyCreationForm & operator=(const ShrubberyCreationForm &rhs);
     void doWork(const std::string &target) const;
+    Form * clone();
     ~ShrubberyCreationForm();
 };
 

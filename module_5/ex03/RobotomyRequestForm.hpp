@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:20:25 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:22:09 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 12:42:10 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
     RobotomyRequestForm(const RobotomyRequestForm &obj);
     RobotomyRequestForm & operator = (const RobotomyRequestForm &);
     ~RobotomyRequestForm();
+    Form * clone();
     void doWork(const std::string &target) const;
 };
 

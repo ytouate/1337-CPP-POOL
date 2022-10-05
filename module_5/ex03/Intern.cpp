@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:08 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 12:44:43 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 17:22:08 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
         if (arr[i] == _name)
         {
             std::cout << "Intern creates " << _target << std::endl;
-            for (int j = 0; j < i; j++)
+            for (int j = 0; j < 3; j++)
                 delete list[j];
             return (list[i]->clone());
         }
@@ -42,6 +42,7 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
 }
 
 Intern::Intern(const Intern &obj) { (void)obj; }
+
 Intern &Intern::operator=(const Intern &rhs)
 {
     (void)rhs;

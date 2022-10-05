@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:27:25 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 11:36:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 17:12:17 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ public:
     void beSigned(Bureaucrat &);
     Form(const Form &);
     Form &operator=(const Form &);
-    ~Form();
+    virtual ~Form();
 };
 
 std::ostream &operator<<(std::ostream &, const Form &);

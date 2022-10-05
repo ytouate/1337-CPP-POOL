@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:27:25 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 11:46:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 17:12:10 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
     Form(const Form &);
     void execute(Bureaucrat const &executor) const;
     Form &operator=(const Form &);
-    ~Form();
+    virtual ~Form();
 };
 
 std::ostream &operator<<(std::ostream &, const Form &);

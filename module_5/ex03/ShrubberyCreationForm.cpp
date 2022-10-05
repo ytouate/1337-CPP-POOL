@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:58 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 18:32:48 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 19:04:25 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ void ShrubberyCreationForm::doWork(const std::string &target) const
     fileObj.open(fileName, std::ios::out);
     if (fileObj.is_open())
     {
-        std::cout << "       _-_"
-                  << "    /~~   ~~\\"
-                  << " /~~         ~~\\"
-                  << "{               }"
-                  << " \\  _-     -_  /"
-                  << "   ~  \\\\ //  ~"
-                  << "_- -   | | _- _"
-                  << "  _ -  | |   -_"
+        fileObj << "       _-_\n"
+                  << "    /~~   ~~\\\n"
+                  << " /~~         ~~\\\n"
+                  << "{               }\n"
+                  << " \\  _-     -_  /\n"
+                  << "   ~  \\\\ //  ~\n"
+                  << "_- -   | | _- _\n"
+                  << "  _ -  | |   -_\n"
                   << "      // \\\\"
                   << std::endl;
     }

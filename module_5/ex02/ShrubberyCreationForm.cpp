@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:58 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/03 20:23:23 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 19:04:57 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,18 @@ void ShrubberyCreationForm::doWork(const std::string &target) const
 
     fileObj.open(fileName, std::ios::out);
     if (fileObj.is_open())
-        fileObj << "Some ASCII Trees" << std::endl;
+    {
+        fileObj << "       _-_\n"
+                  << "    /~~   ~~\\\n"
+                  << " /~~         ~~\\\n"
+                  << "{               }\n"
+                  << " \\  _-     -_  /\n"
+                  << "   ~  \\\\ //  ~\n"
+                  << "_- -   | | _- _\n"
+                  << "  _ -  | |   -_\n"
+                  << "      // \\\\"
+                  << std::endl;
+    }
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &obj)

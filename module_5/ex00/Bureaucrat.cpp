@@ -6,13 +6,14 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:38:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 11:33:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/04 18:34:10 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(const std::string &_name, short int _grade) : name(_name)
+Bureaucrat::Bureaucrat(const std::string &_name, short int _grade)
+    : name(_name)
 {
     if (_grade < 1)
         throw GradeTooHighException();

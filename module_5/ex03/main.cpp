@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 18:28:21 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 18:56:35 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,15 @@
 int main()
 {
     Intern randomIntern;
-    Form *reff = randomIntern.makeForm("robotomy request", "Name");
-    (void)reff;
-    // std::cout << reff << std::endl;
-    // (void)reff;
-    // reff = randomIntern.makeForm("presidential pardon form", "Youssef");
-    // std::cout << *reff << std::endl;
+    try
+    {
+        Form *reff = randomIntern.makeForm("robotomy request form", "Name");
+        reff->doWork("A");
+        std::cout << *reff << std::endl;
+    }
+    catch(std::exception & exp)
+    {
+        std::cout << "Failed Because" << exp.what() << " of that Type " << std::endl;
+    }
+    
 }

@@ -6,24 +6,25 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:08 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 18:29:09 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 18:47:46 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
+#include "FormCreatingException.hpp"
 
 Form *Intern::makeForm(const std::string &_name, const std::string &_target)
 {
     Form * list[3] = {
-        new ShrubberyCreationForm(_target),
         new RobotomyRequestForm(_target),
+        new ShrubberyCreationForm(_target),
         new PresidentialPardonForm(_target),
     };
 
     std::string arr[3] = {
         "robotomy request",
-        "shrubbery creation form",
-        "presidential pardon form",
+        "shrubbery creation",
+        "presidential pardon",
     };
     for (int i = 0; i < 3; i++)
     {
@@ -36,9 +37,10 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
             return (ref);
         }
     }
-    std::cerr << "Cannot Create Object of type " << _name << std::endl;
     for (int i = 0; i < 3; i++)
         delete list[i];
+    throw FormCreatingException();
+    
     return 0;
 }
 

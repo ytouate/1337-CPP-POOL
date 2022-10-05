@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 18:45:33 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/04 12:07:25 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/05 18:46:18 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ FILE = \
 	./PresidentialPardonForm.cpp	\
 	./RobotomyRequestForm.cpp		\
 	./ShrubberyCreationForm.cpp		\
-	./Intern.cpp
+	./Intern.cpp					\
+	./FormCreationException.cpp		\
 	
 
 NAME = ex03
@@ -31,7 +32,7 @@ O_FILE = $(FILE:.cpp=.o)
 all: $(NAME)
 
 $(NAME) : $(O_FILE)
-	@c++ $(CPPFLAGS)  -g $(O_FILE) -o $(NAME)
+	@c++ $(CPPFLAGS) $(O_FILE) -o $(NAME)
 
 clean:
 	@rm -rf *.o

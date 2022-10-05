@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:58 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 12:43:44 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 18:21:16 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void ShrubberyCreationForm::beSigned(Bureaucrat &obj)
     Form::beSigned(obj);
 }
 
-Form *  ShrubberyCreationForm::clone()
+Form *ShrubberyCreationForm::clone()
 {
     return new ShrubberyCreationForm(this->getName());
 }
@@ -34,7 +34,7 @@ void ShrubberyCreationForm::doWork(const std::string &target) const
 
     fileObj.open(fileName, std::ios::out);
     if (fileObj.is_open())
-        fileObj << "Some ASCII Trees" << std::endl;
+        fileObj << "Some Ascii Trees" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &obj)

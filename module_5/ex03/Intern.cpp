@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:08 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 17:22:08 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 18:29:09 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
     {
         if (arr[i] == _name)
         {
+            Form *ref = list[i]->clone();
             std::cout << "Intern creates " << _target << std::endl;
             for (int j = 0; j < 3; j++)
                 delete list[j];
-            return (list[i]->clone());
+            return (ref);
         }
     }
     std::cerr << "Cannot Create Object of type " << _name << std::endl;

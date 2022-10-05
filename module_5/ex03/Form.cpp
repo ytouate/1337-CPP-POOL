@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 15:36:27 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/05 18:22:48 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void Form::execute(Bureaucrat const &executor) const
 }
 std::ostream &operator<<(std::ostream &os, const Form &obj)
 {
+    
     std::string status = obj.getSigningStatus() ? "Signed" : "Not Signed";
     os << "Name:\t\t" << obj.getName()
        << "\nExcution Grade: " << obj.getExcuteGrade()

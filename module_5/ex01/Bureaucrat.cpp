@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:38:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/04 11:59:47 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/06 14:29:43 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void Bureaucrat::signForm(Form &obj)
                   << exp.what() << std::endl;
     }
 }
+
 const std::string &Bureaucrat::getName(void) const
 {
     return this->name;

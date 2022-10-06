@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:08 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 18:47:46 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/06 14:51:47 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
     for (int i = 0; i < 3; i++)
         delete list[i];
     throw FormCreatingException();
-    
     return 0;
 }
 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 18:46:37 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 19:02:49 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/06 15:12:31 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,16 @@
 
 int main()
 {
-    Intern randomIntern;
     try
     {
-        Form *reff = randomIntern.makeForm("shrubbery creation", "Name");
+        Intern randomIntern;
+        Form *reff = randomIntern.makeForm("robotomy request", "Name");
         reff->doWork("A");
         std::cout << *reff << std::endl;
         delete reff;
-        system("leaks ex03");
     }
-    catch(std::exception & exp)
+    catch (std::exception &exp)
     {
         std::cout << "Failed Because" << exp.what() << " of that Type " << std::endl;
-        system("leaks ex03");
     }
 }

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:52 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 17:15:03 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/06 15:06:10 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 void RobotomyRequestForm::doWork(const std::string &target) const
 {
     srand(time(0));
-    int n = rand() % 2 + 1;
-    if (n == 1)
+    int n = rand() % 2;
+    if (n)
     {
         std::cout << "SOME DRILLING NOISES\n"
-              << target << " has been robotomized succfully " << std::endl;
+              << target << " has been robotomized succefully " << std::endl;
     }
     else
         std::cout << " the robotomy failed." << std::endl;

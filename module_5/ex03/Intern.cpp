@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:08 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/06 14:51:47 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/06 15:38:29 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Form *Intern::makeForm(const std::string &_name, const std::string &_target)
 {
-    Form * list[3] = {
+    Form *list[3] = {
         new RobotomyRequestForm(_target),
         new ShrubberyCreationForm(_target),
         new PresidentialPardonForm(_target),
@@ -26,6 +26,7 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
         "shrubbery creation",
         "presidential pardon",
     };
+
     for (int i = 0; i < 3; i++)
     {
         if (arr[i] == _name)
@@ -40,7 +41,6 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
     for (int i = 0; i < 3; i++)
         delete list[i];
     throw FormCreatingException();
-    return 0;
 }
 
 Intern::Intern(const Intern &obj) { (void)obj; }

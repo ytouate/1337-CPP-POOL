@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:31:56 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 18:22:48 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/06 15:37:41 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,4 @@ std::ostream &operator<<(std::ostream &os, const Form &obj)
     return os;
 }
 
-Form::~Form()
-{
-    return;
-}
+Form::~Form() {}

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:58 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 19:04:25 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/07 14:40:52 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void ShrubberyCreationForm::doWork(const std::string &target) const
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &obj)
-    : Form(obj.getName(), 72, 45)
+    : Form(obj.getName(), 145, 137)
 {
     (void)obj;
 }

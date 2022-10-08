@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:04:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 20:46:25 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:52:28 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ void Character::unequip(int idx)
     this->slots[idx] = 0;
 }
 
-Character::Character(std::string const &name)
+Character::Character(std::string const &_name)
 {
     // std::cout << "Character parametrize constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
         this->slots[i] = 0;
-    this->name = name;
+    this->name = _name;
 }
 void Character::use(int idx, ICharacter &target)
 {

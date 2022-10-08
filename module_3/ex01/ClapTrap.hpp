@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/17 21:09:02 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:31:28 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ protected:
     int attackDamage;
 
 public:
-    ClapTrap(const std::string &name);
-    void attack(const std::string &target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+    ClapTrap(const std::string &);
+    void attack(const std::string &);
+    void takeDamage(unsigned int );
+    void beRepaired(unsigned int );
     ClapTrap &operator=(ClapTrap &);
     std::string &getName(void);
     unsigned int getAttackDamage(void);

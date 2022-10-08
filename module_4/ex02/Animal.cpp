@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/28 18:13:00 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:50:13 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-AAnimal::AAnimal(std::string type) : brain(nullptr)
+AAnimal::AAnimal(std::string _type) : brain(0)
 {
     std::cout << "Animal Parametrize Constructor Called" << std::endl;
-    this->type = type;
+    this->type = _type;
 }
 
-AAnimal::AAnimal() : brain(nullptr)
+AAnimal::AAnimal() : brain(0)
 {
     this->type = "Animal";
     std::cout << "Animal Default Constructor Called" << std::endl;
@@ -46,7 +46,7 @@ AAnimal::AAnimal(AAnimal &obj)
 
 AAnimal::~AAnimal()
 {
-    if (this->brain != nullptr)
+    if (this->brain != 0)
     {
         delete this->brain;
     }

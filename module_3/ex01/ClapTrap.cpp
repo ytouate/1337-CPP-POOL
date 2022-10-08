@@ -6,27 +6,23 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:04 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/08 18:21:48 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:30:37 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(const std::string &name)
+ClapTrap::ClapTrap(const std::string &_name)
 {
     std::cout << "ClapTrap Constructor called" << std::endl;
-    this->name = name;
+    this->name = _name;
     this->hitPoints = 10;
     this->energyPoints = 10;
     this->attackDamage = 0;
 }
 
-<<<<<<< HEAD
-ClapTrap::ClapTrap(ClapTrap &obj) {
-=======
 ClapTrap::ClapTrap(ClapTrap &obj)
 {
->>>>>>> 8009383722838ba41d5600378818ad26c322ed6d
     this->name.assign(obj.name);
     this->hitPoints = obj.hitPoints;
     this->energyPoints = obj.energyPoints;

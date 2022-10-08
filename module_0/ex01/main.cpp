@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 21:07:47 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/01 17:18:00 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:24:43 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void    get_index(int& index)
             std::cin.ignore();
         }
         std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore(256, '\n');
         std::cout << "Insert the id of the Contact (1 indexed!)" << std::endl;
         std::cin >> index;
     }

@@ -6,7 +6,7 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:36:13 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/18 18:40:39 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:38:30 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
     std::string _clap_name;
 
 public:
-    DiamondTrap(std::string name);
+    DiamondTrap(std::string );
     DiamondTrap(DiamondTrap &obj);
     DiamondTrap &operator=(DiamondTrap &rhs);
     std::string getName(void);

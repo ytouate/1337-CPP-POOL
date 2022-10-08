@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   GradeTooHighException.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:02:32 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 15:08:04 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:56:41 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "GradeTooHighException.hpp"
 
-const char *GradeTooHighException::what() const _NOEXCEPT
+const char *GradeTooHighException::what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW
 {
     return "Grade Too High";
 }

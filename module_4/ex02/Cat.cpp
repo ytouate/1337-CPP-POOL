@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/28 18:12:39 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:48:56 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Cat::Cat(std::string type) : AAnimal(), brain(new Brain)
+Cat::Cat(std::string _type) : AAnimal(), brain(new Brain)
 {
     std::cout << "Cat Parametrize Constructor Called" << std::endl;
-    // this->brain = new Brain();
-    this->type = type;
+    this->type = _type;
 }
 
 Cat::Cat() : AAnimal(), brain(new Brain)
@@ -38,7 +37,7 @@ Cat &Cat::operator=(const Cat &rhs)
     return (*this);
 }
 
-Cat::Cat(const Cat &obj)
+Cat::Cat(const Cat &obj): AAnimal(obj.getType())
 {
     if (this->getBrain())
         delete this->brain;

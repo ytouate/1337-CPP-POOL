@@ -6,13 +6,13 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:08:24 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/20 14:44:12 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:34:14 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string &_name) : ClapTrap(_name)
 {
     std::cout << "FragTrap constructor called" << std::endl;
     this->hitPoints = 100;

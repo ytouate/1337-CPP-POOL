@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:36 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/29 15:57:51 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:49:10 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ protected:
 
 public:
     AAnimal();
-    AAnimal(std::string type);
+    AAnimal(std::string );
     AAnimal(AAnimal &);
     virtual void fillIdeas() = 0;
     AAnimal &operator=(AAnimal &);

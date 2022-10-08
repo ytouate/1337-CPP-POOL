@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:40:00 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 20:46:38 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:51:54 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ Cure::Cure() : AMateria()
     this->type = "cure";
 }
 
-Cure::Cure(const std::string &type)
+Cure::Cure(const std::string &_type)
 {
     std::cout << "Cure parametrize Constructor called" << std::endl;
-    this->type = type;
+    this->type = _type;
 }
 
 Cure &Cure::operator=(const Cure &rhs)
@@ -31,7 +31,7 @@ Cure &Cure::operator=(const Cure &rhs)
     return (*this);
 }
 
-Cure::Cure(const Cure &obj)
+Cure::Cure(const Cure &obj): AMateria(obj.getType())
 {
     (void)obj;
     this->type = obj.type;

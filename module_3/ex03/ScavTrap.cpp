@@ -6,13 +6,13 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:11:02 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/20 14:44:55 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:32:59 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name)
 {
     std::cout << "ScavTrap constructor called" << std::endl;
     this->energyPoints = 50;

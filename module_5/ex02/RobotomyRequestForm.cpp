@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:52 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/05 17:15:33 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 19:02:27 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <cstdlib>
 
 void RobotomyRequestForm::doWork(const std::string &target) const
 {
-    srand(time(0));
-    int n = rand() % 2 + 1;
+    std::srand(time(0));
+    int n = std::rand() % 2 + 1;
     if (n == 1)
     {
         std::cout << "SOME DRILLING NOISES\n"

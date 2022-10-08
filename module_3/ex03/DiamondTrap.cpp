@@ -6,13 +6,14 @@
 /*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:36:10 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/19 10:10:35 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:39:25 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name) :ClapTrap("name_clap_trap"), FragTrap(name), ScavTrap(name)  {
+DiamondTrap::DiamondTrap(std::string _name)
+    :ClapTrap("name_clap_trap"), FragTrap(_name), ScavTrap(_name)  {
     std::cout << "DiamondTrap Constructor called" << std::endl;
     this->name = name;
 }

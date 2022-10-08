@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:02:15 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 20:46:46 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:52:11 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Ice &Ice::operator=(const Ice &rhs)
     return (*this);
 }
 
-Ice::Ice(const Ice &obj)
+Ice::Ice(const Ice &obj): AMateria(obj.getType())
 {
     this->type = obj.type;
 }

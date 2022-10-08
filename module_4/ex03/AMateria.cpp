@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 18:44:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/30 20:44:36 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:54:52 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,10 @@ AMateria::~AMateria()
     std::cout << "AMateria Destructor called" << std::endl;
 }
 
-
+AMateria::AMateria(std::string const &_type)
+{
+    this->type = _type;
+}
 std::string const &AMateria::getType() const
 {
     return (this->type);

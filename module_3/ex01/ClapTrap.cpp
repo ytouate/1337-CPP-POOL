@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
+/*   By: ytouate <touateyoussef2003@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:04:04 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/14 17:09:17 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/09/15 15:16:43 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ ClapTrap::ClapTrap(const std::string& name) {
     this->energyPoints = 10;
     this->attackDamge = 10;
 }
-
 
 ClapTrap::ClapTrap(ClapTrap &obj) {
     this->name.assign(obj.name);

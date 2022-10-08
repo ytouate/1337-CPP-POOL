@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:08 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/06 15:38:29 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 19:04:51 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
-#include "FormCreatingException.hpp"
+#include "FormCreationException.hpp"
 
 Form *Intern::makeForm(const std::string &_name, const std::string &_target)
 {

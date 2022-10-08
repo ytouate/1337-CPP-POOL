@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:21:58 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/07 14:40:52 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 19:03:53 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void ShrubberyCreationForm::doWork(const std::string &target) const
     std::ofstream fileObj;
     std::string fileName = target + "shrubbery";
 
-    fileObj.open(fileName, std::ios::out);
+    fileObj.open(fileName.c_str(), std::ios::out);
     if (fileObj.is_open())
     {
         fileObj << "       _-_\n"

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:53:07 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/23 17:00:59 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:42:05 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Dog : public Animal
 {
 public:
     Dog();
-    Dog(std::string type);
+    Dog(std::string );
     Dog(Dog &);
     Dog &operator=(Dog &);
     void makeSound() const;

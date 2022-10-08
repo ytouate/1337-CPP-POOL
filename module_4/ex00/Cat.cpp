@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:52:05 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/24 12:27:24 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:41:27 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(std::string type)
+Cat::Cat(std::string &_type)
 {
     std::cout << "Cat Parametrize Constructor Called" << std::endl;
-    this->type = type;
+    this->type = _type;
 }
 
 Cat::Cat() : Animal()
@@ -30,7 +30,7 @@ Cat &Cat::operator=(Cat &rhs)
     return (*this);
 }
 
-Cat::Cat(Cat &obj)
+Cat::Cat(Cat &obj): Animal(obj.getType())
 {
     this->type = obj.type;
 }

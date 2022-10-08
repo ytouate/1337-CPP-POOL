@@ -12,10 +12,10 @@
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal(std::string type)
+WrongAnimal::WrongAnimal(std::string _type)
 {
     std::cout << "WrongAnimal Parametrize Constructor Called" << std::endl;
-    this->type = type;
+    this->type = _type;
 }
 
 WrongAnimal::WrongAnimal()

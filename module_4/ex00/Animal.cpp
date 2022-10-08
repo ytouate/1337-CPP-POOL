@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:47:34 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/24 20:51:59 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:42:25 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(std::string type)
+Animal::Animal(std::string _type)
 {
     std::cout << "Animal Parametrize Constructor Called" << std::endl;
-    this->type = type;
+    this->type = _type;
 }
 
 Animal::Animal()

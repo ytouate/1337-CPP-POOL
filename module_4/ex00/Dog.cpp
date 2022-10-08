@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:07:50 by ytouate           #+#    #+#             */
-/*   Updated: 2022/09/23 17:01:06 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:41:58 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(std::string type)
+Dog::Dog(std::string _type)
 {
     std::cout << "Dog Parametrize Constructor Called" << std::endl;
-    this->type = type;
+    this->type = _type;
 }
 
 Dog::Dog()
@@ -35,7 +35,7 @@ void Dog::makeSound() const
     std::cout << "woof woof !" << std::endl;
 }
 
-Dog::Dog(Dog &obj)
+Dog::Dog(Dog &obj): Animal(obj.getType())
 {
     this->type = obj.type;
 }

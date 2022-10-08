@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                            :+:      :+:    :+: */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -19,7 +19,7 @@ class WrongCat : public WrongAnimal
 {
 public:
     WrongCat();
-    WrongCat(std::string type);
+    WrongCat(std::string );
     WrongCat(WrongCat &);
     WrongCat &operator=(WrongCat &);
     void makeSound() const;

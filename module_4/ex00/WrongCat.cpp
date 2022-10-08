@@ -12,10 +12,10 @@
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(std::string type)
+WrongCat::WrongCat(std::string _type)
 {
     std::cout << "WrongCat Parametrize Constructor Called" << std::endl;
-    this->type = type;
+    this->type = _type;
 }
 
 WrongCat::WrongCat() : WrongAnimal()
@@ -30,7 +30,7 @@ WrongCat &WrongCat::operator=(WrongCat &rhs)
     return (*this);
 }
 
-WrongCat::WrongCat(WrongCat &obj)
+WrongCat::WrongCat(WrongCat &obj): WrongAnimal(obj.getType())
 {
     this->type = obj.type;
 }

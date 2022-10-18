@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 18:32:00 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/04 18:32:43 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/18 19:43:15 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,3 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
-
-run:
-	./$(NAME)

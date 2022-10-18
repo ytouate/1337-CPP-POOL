@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 18:32:18 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 21:32:17 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/18 21:27:29 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/18 21:31:18 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "A.hpp"
-#include "B.hpp"
-#include "C.hpp"
+#if !defined(UTILS_HPP)
+#define UTILS_HPP
+
 #include <iostream>
+#include <cstring>
+#include <cctype>
+#include <iomanip>
 
-int main()
-{
-    Base *obj = generate();
-    identify(obj);
+void print_char(std::string s);
+void print_int(std::string s);
+void print_float(std::string s, int prc);
+int count_precision(std::string s);
+void print_double(std::string s);
 
-    delete obj;
-}
+#endif // UTILS_HPP

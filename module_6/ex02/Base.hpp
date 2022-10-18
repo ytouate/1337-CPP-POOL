@@ -6,21 +6,23 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:32:48 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 17:10:55 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/18 21:31:53 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #if !defined(BASE_HPP)
 #define BASE_HPP
 
+#include <cstdlib>
+#include <iostream>
+
 class Base
 {
 private:
-    
 public:
     virtual ~Base();
 };
 
-Base * generate (void);
-void identify (Base *p);
+Base *generate(void);
+void identify(Base *p);
 #endif // BASE_HPP

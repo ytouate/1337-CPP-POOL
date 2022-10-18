@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
+/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:08 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/08 19:04:51 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/18 08:35:36 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Form *Intern::makeForm(const std::string &_name, const std::string &_target)
     }
     for (int i = 0; i < 3; i++)
         delete list[i];
-    throw FormCreatingException();
+    throw FormCreationException();
 }
 
 Intern::Intern(const Intern &obj) { (void)obj; }

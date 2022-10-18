@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   GradeTooHighException.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytouate < ytouate@student.1337.ma>         +#+  +:+       +#+        */
+/*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:02:11 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/08 18:56:47 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/18 08:32:19 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class GradeTooHighException : public std::exception
 {
 private:
 public:
-    const char *what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW;
+    const char *what() const _NOEXCEPT; //_GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW;
 };
 
 #endif // GRADE_TOO_LOW_EXCEPTION

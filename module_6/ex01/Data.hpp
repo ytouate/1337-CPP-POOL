@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 18:32:18 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 11:52:19 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/18 11:23:33 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/18 11:35:08 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Data.hpp"
+#if !defined(DATA_HPP)
+#define DATA_HPP
 
-int main()
+#include <iostream>
+#include <cstdint>
+
+class Data
 {
-    void *something = (char *)"hello";
-    uintptr_t val;
+private:
+    const int age;
+    const std::string name;
+public:
+    Data();
+    Data(const Data &);
+    std::string const &getName(void) const;
+    int getAge(void) const;
+    Data & operator = (const Data &);
+    ~Data();
+};
 
-    val = (uintptr_t)something;
-    std::cout << val << std::endl;
-    void *ptr = (void *)val;
-    std::cout << (char *)ptr << std::endl;
-    return 0;
-}
+uintptr_t serialize(Data* ptr);
+Data* deserialize(uintptr_t raw);
+#endif // DATA_HPP

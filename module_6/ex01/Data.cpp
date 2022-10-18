@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 18:32:18 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 11:52:19 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/18 11:26:01 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/18 11:33:55 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Data.hpp"
 
-int main()
-{
-    void *something = (char *)"hello";
-    uintptr_t val;
+Data::Data()
+    : age(19), name("Youssef") {}
 
-    val = (uintptr_t)something;
-    std::cout << val << std::endl;
-    void *ptr = (void *)val;
-    std::cout << (char *)ptr << std::endl;
-    return 0;
+Data::~Data() {}
+
+Data::Data(const Data &obj)
+    : age(obj.getAge()), name(obj.getName()) {}
+
+Data &Data::operator=(const Data &rhs)
+{
+    (void)rhs;
+    return *this;
+}
+
+std::string const &Data::getName(void) const
+{
+    return this->name;
+}
+
+int Data::getAge(void) const
+{
+    return this->age;
 }

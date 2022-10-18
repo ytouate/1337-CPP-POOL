@@ -6,12 +6,16 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 18:32:00 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/07 14:49:30 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/18 16:31:00 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
 	./main.cpp	\
+	./Base.cpp	\
+	./A.cpp		\
+	./B.cpp		\
+	./C.cpp		\
 
 NAME = ex02
 

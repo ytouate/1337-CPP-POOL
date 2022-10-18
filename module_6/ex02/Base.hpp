@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 18:32:18 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 16:37:44 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/18 16:32:48 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/18 16:32:50 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "A.hpp"
-#include "B.hpp"
-#include "C.hpp"
+#if !defined(BASE_HPP)
+#define BASE_HPP
 
-int main()
+class Base
 {
-    Base base;
-    A a;
-    B b;
-    C c;
-}
+private:
+    
+public:
+    virtual ~Base();
+};
+
+#endif // BASE_HPP

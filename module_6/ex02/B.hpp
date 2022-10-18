@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 18:32:18 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 16:37:44 by ytouate          ###   ########.fr       */
+/*   Created: 2022/10/18 16:33:00 by ytouate           #+#    #+#             */
+/*   Updated: 2022/10/18 16:33:45 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "A.hpp"
-#include "B.hpp"
-#include "C.hpp"
+#if !defined(B_HPP)
+#define B_HPP
 
-int main()
+#include "Base.hpp"
+
+class B : public Base
 {
-    Base base;
-    A a;
-    B b;
-    C c;
-}
+private:
+    
+public:
+    B();
+    ~B();
+};
+
+#endif // B_HPP

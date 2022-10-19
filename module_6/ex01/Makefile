@@ -6,14 +6,14 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 18:32:00 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/18 16:22:38 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/18 21:45:57 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
 	./main.cpp	\
-	./Data.cpp	\
-	./utils.cpp
+	./utils.cpp	\
+	./Data.cpp
 NAME = ex00
 
 CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98

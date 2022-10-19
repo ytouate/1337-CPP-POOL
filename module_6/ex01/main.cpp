@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:32:18 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 18:05:49 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/18 21:48:27 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,13 @@ int main()
 {
     Data *data;
 
-    data = new Data();
+    data = new Data;
 
     uintptr_t val;
-    std::cout << data << std::endl;
-    std::cout << data->getAge() << " " << data->getName() << std::endl;
+    std::cout << data->name << " " << data->age << std::endl;
     val = serialize(data);
-    std::cout << val << std::endl;
     Data *something = deserialize(val);
-    std::cout << something << std::endl;
-    std::cout << something->getAge() << " " << something->getName() << std::endl;
+    std::cout << something->name << " " << something->age << std::endl;
+    delete data;
     return 0;
 }

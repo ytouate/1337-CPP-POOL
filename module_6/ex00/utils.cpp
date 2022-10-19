@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 21:27:20 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 21:31:12 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/19 10:06:19 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void print_char(std::string s)
 {
-    char c = static_cast<char>(atoi(s.c_str()));
+    int n = atoi(s.c_str());
+    char c = static_cast<char>(n);
     std::cout << "char: ";
     if (isprint(c))
         std::cout << c << std::endl;
-    else if (s == "nan")
+    else if (!isdigit(s[0]))
         std::cout << "impossible" << std::endl;
     else
         std::cout << "Not Displayable" << std::endl;
@@ -28,7 +29,7 @@ void print_int(std::string s)
 {
     std::cout << "int: ";
 
-    if (s == "nan")
+    if (!isdigit(s[0]))
         std::cout << "impossible" << std::endl;
     else
         std::cout << atoi(s.c_str()) << std::endl;
@@ -41,7 +42,7 @@ void print_float(std::string s, int prc)
     std::cout.precision(prc);
     std::cout << std::fixed;
     std::cout << "float: "
-              << static_cast<float>(atof(s.c_str()))
+              << atof(s.c_str())
               << "f" << std::endl;
 }
 

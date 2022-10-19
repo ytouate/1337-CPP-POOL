@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:32:18 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 21:51:22 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/19 10:13:29 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 int main()
 {
     Base *obj = generate();
+    Base& reff = *generate();
+    identify(reff);
     identify(obj);
 
     delete obj;

@@ -61,7 +61,7 @@ public:
     }
     ~Array()
     {
-        delete [] this->array;
+        delete[] this->array;
     }
 };
 

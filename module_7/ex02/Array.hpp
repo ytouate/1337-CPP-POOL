@@ -46,7 +46,13 @@ public:
     {
         return this->length;
     }
-    T &operator[](int idx) const
+    T &operator[](int idx)
+    {
+        if (idx < 0 or idx >= this->length)
+            throw(std::out_of_range("Index out of range"));
+        return this->array[idx];
+    }
+    T const & operator[](int idx) const
     {
         if (idx < 0 or idx >= this->length)
             throw(std::out_of_range("Index out of range"));

@@ -15,14 +15,14 @@ FILE = \
 
 NAME = ex02
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
 O_FILE = $(FILE:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME) : $(O_FILE)
-	@c++ $(CPPFLAGS)  -g $(O_FILE) -o $(NAME)
+	@c++ $(CPPFLAGS)  -g $(O_FILE) -o $(NAME) 
 
 clean:
 	@rm -rf *.o

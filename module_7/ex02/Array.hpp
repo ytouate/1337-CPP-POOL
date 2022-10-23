@@ -25,10 +25,10 @@ private:
 public:
     Array()
     {
-        std::cout << "am here\n";
         this->array = new T[0];
         this->length = 0;
     }
+
     Array(unsigned int n)
     {
         this->array = new T[n];
@@ -36,28 +36,36 @@ public:
         for (int i = 0; i < this->length; i++)
             memset(&array[i], 0, sizeof(array[i]));
     }
-    T &operator=(const Array &rhs)
+
+    Array &operator=( const Array &rhs)
     {
-        std::cout << "here\n";
+        delete [] this->array;
+        this->length = rhs.size();
+        this->array = new T[this->length];
         for (int i = 0; i < this->length; i++)
             this->array[i] = rhs[i];
+        return (*this);
     }
+
     int size(void) const
     {
         return this->length;
     }
+
     T &operator[](int idx)
     {
         if (idx < 0 or idx >= this->length)
             throw(std::out_of_range("Index out of range"));
         return this->array[idx];
     }
+
     T const & operator[](int idx) const
     {
         if (idx < 0 or idx >= this->length)
             throw(std::out_of_range("Index out of range"));
         return this->array[idx];
     }
+
     Array(const Array &obj)
     {
         this->length = obj.size();
@@ -65,8 +73,10 @@ public:
         for (int i = 0; i < this->length; i++)
             (*this)[i] = obj[i];
     }
+
     ~Array()
     {
+        // std::cout << "Destructor called\n";
         delete[] this->array;
     }
 };

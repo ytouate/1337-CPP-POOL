@@ -12,8 +12,10 @@
 
 #include "Array.hpp"
 #define MAX_VAL 750
+
 int main()
 {
+    std::cout << b[1] << std::endl;
     Array<int> nums(MAX_VAL);
     int *mirror = new int[MAX_VAL];
     srand(time(NULL));
@@ -43,17 +45,7 @@ int main()
     {
         std::cerr << e.what() << "\n";
     }
-    try
-    {
-        nums[MAX_VAL] = 0;
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << '\n';
-    }
     for (int i = 0; i < MAX_VAL; i++)
-    {
         nums[i] = rand();
-    }
     delete[] mirror;
 }

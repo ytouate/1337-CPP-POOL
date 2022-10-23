@@ -6,7 +6,7 @@
 #    By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 18:32:00 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/18 21:45:57 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/19 09:52:32 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FILE = \
 	./Data.cpp
 NAME = ex00
 
-CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 O_FILE = $(FILE:.cpp=.o)
 

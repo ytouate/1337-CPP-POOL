@@ -15,7 +15,7 @@ FILE = \
 
 NAME = ex02
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 O_FILE = $(FILE:.cpp=.o)
 

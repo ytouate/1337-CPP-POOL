@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:23:33 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/18 21:45:27 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/19 09:49:02 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 typedef struct s_Data
 {
     s_Data();
-    int age;
-    std::string name;
+    int a;
+    bool b;
+    char c;
 }Data;
 
 uintptr_t serialize(Data *ptr);

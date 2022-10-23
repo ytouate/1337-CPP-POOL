@@ -15,7 +15,6 @@
 
 int main()
 {
-    std::cout << b[1] << std::endl;
     Array<int> nums(MAX_VAL);
     int *mirror = new int[MAX_VAL];
     srand(time(NULL));

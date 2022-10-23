@@ -41,7 +41,6 @@ std::ostream &operator<<(std::ostream &o, const Awesome &a)
     return o;
 }
 
-
 int main(void)
 {
     int a = 2;

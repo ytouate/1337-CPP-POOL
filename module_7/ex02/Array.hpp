@@ -37,9 +37,9 @@ public:
             memset(&array[i], 0, sizeof(array[i]));
     }
 
-    Array &operator=( const Array &rhs)
+    Array &operator=(const Array &rhs)
     {
-        delete [] this->array;
+        delete[] this->array;
         this->length = rhs.size();
         this->array = new T[this->length];
         for (int i = 0; i < this->length; i++)
@@ -59,7 +59,7 @@ public:
         return this->array[idx];
     }
 
-    T const & operator[](int idx) const
+    T const &operator[](int idx) const
     {
         if (idx < 0 or idx >= this->length)
             throw(std::out_of_range("Index out of range"));
@@ -78,6 +78,7 @@ public:
     {
         // std::cout << "Destructor called\n";
         delete[] this->array;
+        this->array = 0;
     }
 };
 

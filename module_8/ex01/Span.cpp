@@ -50,6 +50,7 @@ int Span::longestSpan(void)
 
 Span::Span( const Span & obj)
 {
+    this->N = obj.N;
     this->spans.reserve(obj.N);
     this->spans = obj.spans;
 }
@@ -57,8 +58,10 @@ Span::Span( const Span & obj)
 Span & Span::operator = ( const Span & obj )
 {
     this->spans.clear();
-    this->spans.resize(obj.N);
+    this->N = obj.N;
+    this->spans.reserve(this->N);
     this->spans = obj.spans;
+
     return *this;
 }
 

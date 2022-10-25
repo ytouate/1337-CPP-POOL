@@ -2,22 +2,19 @@
 
 Span::Span() : N(0)
 {
-    this->spans = new int[0];
-    this->nb_elements = 0;
+    this->spans.reserve(N);
 }
 
 Span::Span(unsigned int _N) : N(_N)
 {
-    this->spans = new int[this->N];
-    this->nb_elements = 0;
+    this->spans.reserve(N);
 }
 
 void Span::addNumber(int n)
 {
-    if (nb_elements >= N)
+    if (this->spans.size() >= N)
         throw std::out_of_range("out of range");
-    this->spans[nb_elements] = n;
-    nb_elements++;
+    this->spans.insert(this->spans.begin() + this->spans.size(), n);
 }
 
 const char * Span::notEnoughElemenentException::what(void) const _NOEXCEPT
@@ -27,27 +24,26 @@ const char * Span::notEnoughElemenentException::what(void) const _NOEXCEPT
 
 int Span::shortestSpan( void )
 {
-    if (this->nb_elements <= 1)
+    if (this->spans.size() <= 1)
         throw Span::notEnoughElemenentException();
-    std::sort(this->spans, this->spans + this->nb_elements);
-    int tmp[nb_elements];
-    for (size_t i = 0; i < nb_elements - 1; i++)
+    std::sort(this->spans.begin(), this->spans.end());
+    int tmp[this->spans.size()];
+    for (size_t i = 0; i < this->spans.size() - 1; i++)
     {
         tmp[i] = std::abs(this->spans[i + 1] - this->spans[i]);
     }
-    return *std::min_element(this->spans, this->spans + this->nb_elements);
+    return *std::min_element(this->spans.begin(), this->spans.end());
 }
 
 int Span::longestSpan ( void )
 {
-    if (this->nb_elements <= 1)
+    if (this->spans.size() <= 1)
         throw Span::notEnoughElemenentException();
-    int min = *std::min_element(this->spans, this->spans + this->nb_elements);
-    int max = *std::max_element(this->spans, this->spans + this->nb_elements);
+    int min = *std::min_element(this->spans.begin(), this->spans.end());
+    int max = *std::max_element(this->spans.begin(), this->spans.end());
     return (max - min);
 }
 
 Span::~Span()
 {
-    delete [] this->spans;
 }

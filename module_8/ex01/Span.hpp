@@ -7,8 +7,7 @@ class Span
 {
 private:
     unsigned int N;
-    int *spans;
-    size_t nb_elements;
+    std::vector <int> spans;
 public:
     Span();
     Span(unsigned int );

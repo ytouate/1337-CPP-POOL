@@ -11,10 +11,17 @@ private:
 public:
     Span();
     Span(unsigned int );
+    Span( const Span & );
+    Span & operator = ( const Span & );
     void addNumber(int n);
     int shortestSpan();
     int longestSpan();
     class notEnoughElemenentException : public std::exception
+    {
+        public:
+        const char * what( void ) const _NOEXCEPT;
+    };
+    class tooMuchElementException : public std::exception
     {
         public:
         const char * what( void ) const _NOEXCEPT;

@@ -22,6 +22,10 @@ const char *Span::notEnoughElemenentException::what(void) const _NOEXCEPT
     return "Not Enough Elements";
 }
 
+const char *Span::tooMuchElementException::what(void) const _NOEXCEPT
+{
+    return "Too much Elements to copy";
+}
 int Span::shortestSpan(void)
 {
     if (this->spans.size() <= 1)
@@ -44,19 +48,27 @@ int Span::longestSpan(void)
     return (max - min);
 }
 
+Span::Span( const Span & obj)
+{
+    this->spans.reserve(obj.N);
+    this->spans = obj.spans;
+}
+
+Span & Span::operator = ( const Span & obj )
+{
+    this->spans.clear();
+    this->spans.resize(obj.N);
+    this->spans = obj.spans;
+    return *this;
+}
+
 void Span::fillSpans(std::vector<int> &tmp)
 {
-    std::copy(tmp.begin(), tmp.end(), this->spans.begin());
-    // for (std::vector<int>::iterator it = tmp.begin(); it != tmp.end(); ++it)
-    // {
-    //     this->spans.insert(this->spans.begin(), *it);
-    //     this->spans.begin()++;
-    //     size++;
-    // }
-    // this->spans.resize(size);
-    this->spans.resize(tmp.size());
-    std::cout << "Size == " << spans.size() << std::endl;
+    if (tmp.size() > N)
+        throw Span::tooMuchElementException();
+    this->spans.insert(this->spans.begin(), tmp.begin(), tmp.end());
 }
+
 Span::~Span()
 {
     this->spans.clear();

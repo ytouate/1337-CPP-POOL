@@ -4,13 +4,14 @@ int main()
 {
     std::srand(time(NULL));
     std::vector <int> tmp;
-    tmp.reserve(100000);
+    tmp.reserve(10);
     for (int i = 0; i < 100000; i++)
-        tmp.push_back(rand());
-    
+    {
+        const int val = rand();
+        tmp.push_back(val);
+    }
     Span sp = Span(100000);
     sp.fillSpans(tmp);
-
-    std::cout << sp.shortestSpan() << std::endl;
-    std::cout << sp.longestSpan() << std::endl;
+    std::cout << "shortest span ==  " << sp.shortestSpan() << std::endl;
+    std::cout << "longest span == " << sp.longestSpan() << std::endl;
 }

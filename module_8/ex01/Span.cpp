@@ -17,12 +17,12 @@ void Span::addNumber(int n)
     this->spans.insert(this->spans.begin() + this->spans.size(), n);
 }
 
-const char * Span::notEnoughElemenentException::what(void) const _NOEXCEPT
+const char *Span::notEnoughElemenentException::what(void) const _NOEXCEPT
 {
     return "Not Enough Elements";
 }
 
-int Span::shortestSpan( void )
+int Span::shortestSpan(void)
 {
     if (this->spans.size() <= 1)
         throw Span::notEnoughElemenentException();
@@ -35,7 +35,7 @@ int Span::shortestSpan( void )
     return *std::min_element(this->spans.begin(), this->spans.end());
 }
 
-int Span::longestSpan ( void )
+int Span::longestSpan(void)
 {
     if (this->spans.size() <= 1)
         throw Span::notEnoughElemenentException();
@@ -44,6 +44,20 @@ int Span::longestSpan ( void )
     return (max - min);
 }
 
+void Span::fillSpans(std::vector<int> &tmp)
+{
+    std::copy(tmp.begin(), tmp.end(), this->spans.begin());
+    // for (std::vector<int>::iterator it = tmp.begin(); it != tmp.end(); ++it)
+    // {
+    //     this->spans.insert(this->spans.begin(), *it);
+    //     this->spans.begin()++;
+    //     size++;
+    // }
+    // this->spans.resize(size);
+    this->spans.resize(tmp.size());
+    std::cout << "Size == " << spans.size() << std::endl;
+}
 Span::~Span()
 {
+    this->spans.clear();
 }

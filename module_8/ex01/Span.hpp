@@ -19,6 +19,7 @@ public:
         public:
         const char * what( void ) const _NOEXCEPT;
     };
+    void fillSpans(std::vector <int> &tmp);
     ~Span();
 };
 

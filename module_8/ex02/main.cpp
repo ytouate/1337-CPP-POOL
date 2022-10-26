@@ -45,6 +45,7 @@ int main()
     tmp = tmp2;
     MutantStack<int>::const_iterator begin_it = tmp.begin();
     MutantStack<int>::const_iterator end_it = tmp.end();
+
     while (begin_it != end_it)
     {
         std::cout << " " << *begin_it;

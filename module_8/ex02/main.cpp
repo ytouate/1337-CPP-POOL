@@ -14,7 +14,6 @@
 
 int main()
 {
-
     MutantStack<int> mstack;
     mstack.push(5);
     mstack.push(17);
@@ -24,10 +23,10 @@ int main()
     mstack.push(3);
     mstack.push(5);
     mstack.push(737);
+    //[...]
     mstack.push(0);
-    std::stack<int> t;
-    MutantStack<int>::container_type::iterator it = mstack.begin();
-    MutantStack<int>::container_type::iterator ite = mstack.end();
+    MutantStack<int>::iterator it = mstack.begin();
+    MutantStack<int>::iterator ite = mstack.end();
     ++it;
     --it;
     while (it != ite)
@@ -36,4 +35,20 @@ int main()
         ++it;
     }
     std::stack<int> s(mstack);
+    std::cout << "\n === My Tests === \n";
+    MutantStack<int> tmp;
+    tmp.push(10);
+    tmp.push(20);
+    tmp.push(30);
+    MutantStack<int> tmp2(tmp);
+    tmp2.push(40);
+    tmp = tmp2;
+    MutantStack<int>::const_iterator begin_it = tmp.begin();
+    MutantStack<int>::const_iterator end_it = tmp.end();
+    while (begin_it != end_it)
+    {
+        std::cout << " " << *begin_it;
+        begin_it++;
+    }
+    std::cout << "\n";
 }

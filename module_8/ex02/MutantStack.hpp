@@ -20,25 +20,32 @@ template <typename T>
 class MutantStack : public std::stack<T>
 {
 public:
-    typename std::stack<T>::container_type::iterator begin()
+    typedef typename std::stack<T>::container_type::iterator iterator;
+    typedef typename std::stack<T>::container_type::const_iterator const_iterator;
+    iterator begin()
     {
         return this->c.begin();
     }
-    typename std::stack<T>::container_type::iterator end()
+    iterator end()
+    {
+        return this->c.end();
+    }
+    const_iterator _cbegin() const
+    {
+        return this->c.begin();
+    }
+    const_iterator _cend() const
     {
         return this->c.end();
     }
     MutantStack() {}
-    MutantStack(MutantStack const &obj)
+    MutantStack(MutantStack const &obj) : std::stack<int>(obj) {}
+    MutantStack &operator=(MutantStack const &rhs)
     {
-        (void)obj;
-    }
-    MutantStack & operator = (MutantStack const &rhs)
-    {
-        (void)rhs;
+        this->c = rhs.c;
+        return *this;
     }
     ~MutantStack() {}
-
 };
 
 #endif // MUTAN_STACK_HPP

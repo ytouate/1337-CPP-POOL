@@ -3,13 +3,15 @@
 int main()
 {
     std::srand(time(NULL));
-    std::vector <int> tmp;
-    tmp.reserve(10);
+    std::vector<int> tmp;
+    tmp.reserve(100000);
     for (int i = 0; i < 100000; i++)
     {
         const int val = rand();
         tmp.push_back(val);
     }
+    std::cout << "CAPACITY: " << tmp.capacity() << std::endl;
+    std::cout << "SIZE: " << tmp.size() << std::endl;
     Span sp = Span(100000);
     sp.fillSpans(tmp);
     std::cout << "shortest span ==  " << sp.shortestSpan() << std::endl;

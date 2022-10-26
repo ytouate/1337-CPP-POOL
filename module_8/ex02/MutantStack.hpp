@@ -14,6 +14,7 @@
 #define MUTANT_STACK_HPP
 
 #include <stack>
+#include <iostream>
 
 template <typename T>
 class MutantStack : public std::stack<T>
@@ -27,8 +28,17 @@ public:
     {
         return this->c.end();
     }
-    // MutanStack();
-    // ~MutanStack();
+    MutantStack() {}
+    MutantStack(MutantStack const &obj)
+    {
+        (void)obj;
+    }
+    MutantStack & operator = (MutantStack const &rhs)
+    {
+        (void)rhs;
+    }
+    ~MutantStack() {}
+
 };
 
 #endif // MUTAN_STACK_HPP

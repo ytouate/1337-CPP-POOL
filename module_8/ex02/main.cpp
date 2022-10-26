@@ -11,25 +11,7 @@
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
-#include <stack>
-#include <iostream>
 
-// void print(std::stack<int>& s)
-// {
-//     if (s.empty())
-//         return ;
-//     std::cout << s.top() << std::endl;
-//     s.pop();
-//     print(s);
-// }
-// int main()
-// {
-//     std::stack<int> container;
-//     container.push(10);
-//     container.push(20);
-
-// }
-#include <vector>
 int main()
 {
 
@@ -42,8 +24,8 @@ int main()
     mstack.push(3);
     mstack.push(5);
     mstack.push(737);
-    //[...]
     mstack.push(0);
+    std::stack<int> t;
     MutantStack<int>::container_type::iterator it = mstack.begin();
     MutantStack<int>::container_type::iterator ite = mstack.end();
     ++it;

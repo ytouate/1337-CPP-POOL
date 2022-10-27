@@ -18,10 +18,7 @@ class notFoundException : public std::exception
 {
 private:
 public:
-    const char *what(void) const _NOEXCEPT
-    {
-        return "Element Not Found";
-    }
+    const char *what( void ) const _NOEXCEPT;
 };
 
 template <typename T>

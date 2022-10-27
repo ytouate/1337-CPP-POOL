@@ -18,6 +18,11 @@
 #include <array>
 #include "easyfind.hpp"
 
+const char * notFoundException::what( void ) const _NOEXCEPT
+{
+    return "Elemenent Not Found";
+}
+
 int main()
 {
     std::set<int> set;
@@ -45,6 +50,6 @@ int main()
     }
     catch (const std::exception &e)
     {
-        std::cout << e.what() << std::endl;
+        std::cout << "Exception: " << e.what() << std::endl;
     }
 }

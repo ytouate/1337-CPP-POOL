@@ -10,18 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #if !defined(EASY_FIND_HPP)
 #define EASY_FIND_HPP
-#include "notFoundException.hpp"
 #include <algorithm>
+
+class notFoundException : public std::exception
+{
+private:
+public:
+    const char *what(void) const _NOEXCEPT
+    {
+        return "Element Not Found";
+    }
+};
 
 template <typename T>
 typename T::iterator easyfind(T x, int n)
 {
     typename T::iterator it = std::find(x.begin(), x.end(), n);
     if (it == x.end())
-        throw (notFoundException());
+        throw(notFoundException());
     return it;
 }
 

@@ -1,6 +1,5 @@
 FILE = \
 	./main.cpp	\
-	./notFoundException.cpp
 
 NAME = ex00
 

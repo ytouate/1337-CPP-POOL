@@ -36,7 +36,7 @@ int main()
 
     arr[0] = 244;
     arr[1] = 255;
-    try 
+    try
     {
         std::cout << *easyfind(set, 11) << ": Kayn" << std::endl;
         std::cout << *easyfind(vec, 99) << ": Kayn" << std::endl;
@@ -46,5 +46,5 @@ int main()
     catch (const std::exception &e)
     {
         std::cout << e.what() << std::endl;
-    }  
+    }
 }

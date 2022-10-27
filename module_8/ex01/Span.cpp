@@ -26,6 +26,7 @@ const char *Span::tooMuchElementException::what(void) const _NOEXCEPT
 {
     return "Too much Elements to copy";
 }
+
 int Span::shortestSpan(void)
 {
     if (this->spans.size() <= 1)
@@ -48,14 +49,14 @@ int Span::longestSpan(void)
     return (max - min);
 }
 
-Span::Span( const Span & obj)
+Span::Span(const Span &obj)
 {
     this->N = obj.N;
     this->spans.reserve(obj.N);
     this->spans = obj.spans;
 }
 
-Span & Span::operator = ( const Span & obj )
+Span &Span::operator=(const Span &obj)
 {
     this->spans.clear();
     this->N = obj.N;

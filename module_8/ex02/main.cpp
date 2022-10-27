@@ -6,7 +6,7 @@
 /*   By: ytouate <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:33:21 by ytouate           #+#    #+#             */
-/*   Updated: 2022/10/26 12:33:22 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/10/27 13:41:53 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main()
     mstack.push(3);
     mstack.push(5);
     mstack.push(737);
-    //[...]
+
     mstack.push(0);
     MutantStack<int>::iterator it = mstack.begin();
     MutantStack<int>::iterator ite = mstack.end();

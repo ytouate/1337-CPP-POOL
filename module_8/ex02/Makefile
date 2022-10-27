@@ -6,14 +6,14 @@
 #    By: ytouate <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 13:28:57 by ytouate           #+#    #+#              #
-#    Updated: 2022/10/26 13:29:00 by ytouate          ###   ########.fr        #
+#    Updated: 2022/10/27 13:41:45 by ytouate          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILE = \
 	./main.cpp	\
 
-NAME = ex01
+NAME = ex02
 
 CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++14
 

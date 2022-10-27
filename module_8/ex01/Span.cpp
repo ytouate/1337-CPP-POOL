@@ -36,7 +36,7 @@ int Span::shortestSpan(void)
     {
         tmp[i] = std::abs(this->spans[i + 1] - this->spans[i]);
     }
-    return *std::min_element(this->spans.begin(), this->spans.end());
+    return *std::min_element(tmp, tmp + (this->spans.size() - 1));
 }
 
 int Span::longestSpan(void)

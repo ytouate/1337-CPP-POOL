@@ -60,6 +60,8 @@
         "vector": "cpp",
         "queue": "cpp",
         "array": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "fstream": "cpp",
+        "iomanip": "cpp"
     }
 }
